@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="">
+    
+        <title>Porta Aberta - Soluções tecnologicas</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="css/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="icomoon/style.css">
+      </head>
+    
+      <body>
+    
+        <nav class="site-header sticky-top py-1">
+          <div class="flex-menu-bar">
+            <a class="py-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            </a>
+            <a class="flex-item" href="#">Home</a>
+            <a class="flex-item" href="sobre.html">Sobre</a>
+            <a class="flex-item" href="#">Serviços</a>
+            <a class="flex-item" href="#">Contato</a>
+          </div>
+        </nav>
+     
+        <div class="container-flui">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-1" id="contato">
+                    <h1 class="text-center">Solicite um orçamento!</h1>
+                        <form>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Nome</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome completo">
+                                </div>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput2">Telefone</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(XX) XXXX-XXXX">
+                                </div>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput2">Celular</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(XX) X XXXX-XXXX">
+                                </div>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput2">E-mail</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="seu@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Mensagem</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Digite sua mensagem..."></textarea>
+                                </div>
+                                <p class="text-right"><a class="btn btn-lg btn-primary text-right" id="bt" href="contato.html" role="button" >Enviar</a></p>
+                              </form>
+                </div>
+                <div class=" col-lg-4 offset-lg-0 align-self-center">
+                <div id="map" ></div>    
+                </div>
+            </div>
+        </div>
+
+
+            <footer>
+                <div class="flex-container">
+                    <div class="flex-item info-1">
+                        <i class="icon-contato_icone_localizador_cezar_rogerio_imoveis_fa"></i>
+                        <p>QD: 29 CS: 48 LJ:01 ET:C Valparaíso 1 / Valparaíso - G0</p>
+                    </div>
+                    <div class="flex-item info-2">
+                      <i class="icon-be7f7eb1f18933369cf644f87bc8c74b--cone-redondo-tel"></i>
+                      <p>(61) 3025 - 3342</p>
+                    </div>
+                    <div class="flex-item info-3">
+                      <i class="icon-whatsapp-256"></i>
+                      <p>(61) 98139 - 8058</p>
+                    </div>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPortaAbertaSolucoesTecnologicas%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+              </footer>
+    
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="css/js/popper.min.js"></script>
+        <script src="css/js/bootstrap.min.js"></script>
+        <script src="css/js/holder.js"></script>
+        <script src="css/js/jquery.magnific-popup.min.js"></script>
+        <script>
+          Holder.addTheme('thumb', {
+            bg: '#55595c',
+            fg: '#eceeef',
+            text: 'Thumbnail'
+          });
+        </script>
+      <script>
+            function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+        </script>
+         <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdo8Pi2BTPYJ0YmqGodZiDN0cSd3nB0Rc&callback=initMap">
+         </script>
+              
+    </body>
+    </html>
