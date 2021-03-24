@@ -1095,23 +1095,23 @@ audio {
 	border-bottom: 1px solid #000!important
 }
 
-.photography {
+.case_studies {
 	margin: 0 0 44px
 }
 
 @media screen and (min-width:42em) {
-	.photography {
+	.case_studies {
 		margin: 0 0 84px
 	}
 }
 
-.photography .container {
+.case_studies .container {
 	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap
 }
 
-.photography h2 {
+.case_studies h2 {
 	font-size: 14px;
 	margin-bottom: 64px;
 	width: 100%;
