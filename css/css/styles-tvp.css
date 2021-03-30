@@ -28,13 +28,14 @@ pre {
 	font-family: monospace, monospace;
 	font-size: 1em
 }
-
+*/
 
 a {
 	background-color: transparent;
 	cursor: pointer
 }
-*/
+
+/*
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;
@@ -57,7 +58,7 @@ samp {
 small {
 	font-size: 80%
 }
-
+*/
 sub,
 sup {
 	font-size: 75%;
