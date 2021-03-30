@@ -202,10 +202,10 @@ details {
 	display: block
 }
 
+/* to hide detail tag arrow*/
 details > summary {
 	list-style: none;
   }
-  
 details summary::-webkit-details-marker {
 	display:none;
   }
@@ -1219,7 +1219,7 @@ audio {
 	.note {
 		display: -webkit-box;
 		display: flex;
-		flex-wrap: nowrap
+		flex-wrap: none
 	}
 }
 
