@@ -14,6 +14,7 @@ h1 {
 	margin: .67em 0
 }
 
+/*
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -22,16 +23,18 @@ hr {
 	border: 1px solid #eee
 }
 
+
 pre {
 	font-family: monospace, monospace;
 	font-size: 1em
 }
 
+
 a {
 	background-color: transparent;
 	cursor: pointer
 }
-
+*/
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;

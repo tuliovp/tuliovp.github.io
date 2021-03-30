@@ -35,7 +35,14 @@
 <!--
   <script>
     const loader=document.querySelector(".loader");
-    loader.style.display="block",window.addEventListener("load",function(e){loader.style.opacity="0",window.setTimeout(()=>{loader.parentNode.removeChild(loader)},200)});
+    
+    loader.style.display="block",
+    window.addEventListener("load",function(e){
+      loader.style.opacity="0",
+      window.setTimeout(()=>{
+        loader.parentNode.removeChild(loader)
+      },200)
+    });
   </script>
 -->
   <header class="header">
