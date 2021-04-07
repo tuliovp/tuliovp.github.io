@@ -1,4 +1,3 @@
-
 "use strict";
 ! function(e, t) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function(e) {
@@ -3792,4 +3791,4 @@ $(".email").click(function() {
     $("button.control").text("Play"), $("audio").each(function() {
         $(this).get(0).pause()
     }), 0 < e.currentTime ? ($(this).text("Play"), e.currentTime = 0, e.pause()) : ($(this).text("Pause"), e.currentTime = 0, e.play())
-}); 
+});
