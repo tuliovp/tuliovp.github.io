@@ -3789,4 +3789,4 @@ function(e) {
     $("button.control").text("Play"), $("audio").each(function() {
         $(this).get(0).pause()
     }), 0 < e.currentTime ? ($(this).text("Play"), e.currentTime = 0, e.pause()) : ($(this).text("Pause"), e.currentTime = 0, e.play())
-});
+}); 
