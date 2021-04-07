@@ -1,3 +1,4 @@
+
 "use strict";
 ! function(e, t) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function(e) {
@@ -3781,7 +3782,7 @@ function(e) {
         return this.text(this.text() == t ? e : t)
     }
 }), 
-
+//
 $(".email").click(function() {
     $(this).toggleText("Email", "tulio.vasconcelos1@gmail.com")
 }), $(".note__title").click(function() {
