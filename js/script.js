@@ -1,4 +1,4 @@
-
+"use strict";
 $(".email").click(function() {
     $(this).toggleText("Email", "tulio.vasconcelos1@gmail.com")
 }), $(".note__title").click(function() {

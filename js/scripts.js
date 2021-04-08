@@ -3780,9 +3780,7 @@ function(e) {
     toggleText: function(e, t) {
         return this.text(this.text() == t ? e : t)
     }
-}), 
-//
-$(".email").click(function() {
+}), $(".email").click(function() {
     $(this).toggleText("Email", "tulio.vasconcelos1@gmail.com")
 }), $(".note__title").click(function() {
     $(this).siblings(".note__body").toggle()
