@@ -4,67 +4,8 @@
         if (!e.document) throw new Error("jQuery requires a window with a document");
         return t(e)
     } : t(e)
-}, E.each(["top", "left"], function(e, n) {
-        E.cssHooks[n] = Ge(y.pixelPosition, function(e, t) {
-            if (t) return t = Ye(e, n), $e.test(t) ? E(e).position()[n] + "px" : t
-        })
-    }), E.each({
-        Height: "height",
-        Width: "width"
-    }, function(a, s) {
-        E.each({
-            padding: "inner" + a,
-            content: s,
-            "": "outer" + a
-        }, function(r, o) {
-            E.fn[o] = function(e, t) {
-                var n = arguments.length && (r || "boolean" != typeof e),
-                    i = r || (!0 === e || !0 === t ? "margin" : "border");
-                return z(this, function(e, t, n) {
-                    var r;
-                    return m(e) ? 0 === o.indexOf("outer") ? e["inner" + a] : e.document.documentElement["client" + a] : 9 === e.nodeType ? (r = e.documentElement, Math.max(e.body["scroll" + a], r["scroll" + a], e.body["offset" + a], r["offset" + a], r["client" + a])) : void 0 === n ? E.css(e, t, i) : E.style(e, t, n, i)
-                }, s, n ? e : void 0, n)
-            }
-        })
-    }), E.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function(e, n) {
-        E.fn[n] = function(e, t) {
-            return 0 < arguments.length ? this.on(n, null, e, t) : this.trigger(n)
-        }
-    }), E.fn.extend({
-        hover: function(e, t) {
-            return this.mouseenter(e).mouseleave(t || e)
-        }
-    }), E.fn.extend({
-        bind: function(e, t, n) {
-            return this.on(e, null, t, n)
-        },
-        unbind: function(e, t) {
-            return this.off(e, null, t)
-        },
-        delegate: function(e, t, n, r) {
-            return this.on(t, e, n, r)
-        },
-        undelegate: function(e, t, n) {
-            return 1 === arguments.length ? this.off(e, "**") : this.off(t, e || "**", n)
-        }
-    }), E.proxy = function(e, t) {
-        var n, r, i;
-        if ("string" == typeof t && (n = e[t], t = e, e = n), x(e)) return r = s.call(arguments, 2), (i = function() {
-            return e.apply(t || this, r.concat(s.call(arguments)))
-        }).guid = e.guid = e.guid || E.guid++, i
-    }, E.holdReady = function(e) {
-        e ? E.readyWait++ : E.ready(!0)
-    }, E.isArray = Array.isArray, E.parseJSON = JSON.parse, E.nodeName = A, E.isFunction = x, E.isWindow = m, E.camelCase = X, E.type = w, E.now = Date.now, E.isNumeric = function(e) {
-        var t = E.type(e);
-        return ("number" === t || "string" === t) && !isNaN(e - parseFloat(e))
-    }, "function" == typeof define && define.amd && define("jquery", [], function() {
-        return E
-    });
-    var en = T.jQuery,
-        tn = T.$;
-    return E.noConflict = function(e) {
-        return T.$ === E && (T.$ = tn), e && T.jQuery === E && (T.jQuery = en), E
-    }, e || (T.jQuery = T.$ = E), E
+}("undefined" != typeof window ? window : this, function(T, e) {
+    
 }),
 function(e) {
     "function" == typeof define && define.amd ? define(["jquery"], e) : e("object" == typeof exports ? require("jquery") : window.jQuery || window.Zepto)
