@@ -5,6 +5,7 @@
         return t(e)
     } : t(e)
 }("undefined" != typeof window ? window : this, function(T, e) {
+    
     function m(e) {
         return null != e && e === e.window
     }
