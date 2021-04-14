@@ -65,22 +65,22 @@
       <ul>
         <h2>About</h2>
         <a><li onclick="toggleClass('#bio')">Bio</li>
-          <div class="hidden" id="bio">
+          <div style="font-size: 17px;" onclick="toggleClass('#bio')" class="hidden" id="bio">
             <br>
             <p><b>Hi, I'm Tulio.</b></p>
+            <p>I’m passionate about data analysis, product management, behavioural 
+              analytics and customer’s pains.</p>
             <p>I have been breathing accelerators’ dynamic 
               environments since my first internship in 2010. 
               I’m a former entrepreneur and a product management 
-              specialist. With a background of more than 10 years 
+              specialist - with a background of more than 10 years 
               providing consultancy for startups and scale-ups and, 
-              more recently, focusing on analytics/data products. 
-              I’m passionate about startups, data, product, behavioural 
-              analytics and customer’s pains.</p>
+              more recently, focusing on analytics/data products.</p>
             <p>I’ve been helping develop the Brazilian and UK 
               ecosystem of tech and innovative entrepreneurship, 
-              working as a Manager in 1 incubator, 2 accelerators, 
-              1 venture capital firm and 1 international NGO fostering 
-              scale-ups, in 4 different cities. I have also brought 
+              working as a manager in 1 incubator, 2 accelerators, 
+              1 venture capital fund and 1 international NGO fostering 
+              scale-ups, in 5 different cities. I have also brought 
               an American fast-food chain to Brazil before finishing 
               my undergraduate in Business Management and became a 
               regional master franchiser.</p>
@@ -89,7 +89,26 @@
               to study an MSc in Business Analytics in the UK, out 
               of 63,000 applicants globally.</p>
             </div></a>
-        <li><a>Education</a></li>
+        <a><li onclick="toggleClass('#education')">Education</li>
+          <div onclick="toggleClass('#education')" class="hidden" id="education">
+            <br>
+            <p><b>Business Analytics, MSc</b>
+              <br>University of Essex
+              <span style="color:gray; font-size: 15px;">United Kingdom, 2018 – 2019
+              </p>
+              
+            <p style="font-size: 15px;">
+              <ul style="font-size: 15px;">
+                <li>Subjects studied:</li>
+                <li>Machine Learning & ANN, Statistics and forecasting, Data mining,
+                   Visual and analytical techniques, Optimisation Methods & Linear Programming,
+                   Research Methods
+              </ul>
+            </p>
+            <p><b>Business Management, BSc</b>
+              <br>Universidade de Pernambuco
+              <span style="color:gray; font-size: 15px;">Brazil, 2010 – 2013</p>
+            </div></a>
         <li><a>Work Experience</a></li>
         <li><a>Skills</a></li>
         <li><a>Certifications</a></li>
@@ -97,14 +116,14 @@
       </ul>
       <ul>
         <h2>Work</h2> 
-        <li><a href="#case_studies">Case studies</a></li>
-        <li><a href="#notes">Notes</a></li>
+        <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies</a></li>
+        <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>
         <li><a class="disabled">Research</a></li>
         <li><a class="disabled">Competitions</a></li>
       </ul>
       <ul>
         <h2>Contact</h2>
-        <li><a class="email">Email</a></li>
+        <li><a onclick="toggletext()" id="email">Email</a></li>          
         <li><a href="https://www.linkedin.com/in/tuliovasconcelos/" target="_blank">Linkedin</a></li>
         <li><a href="https://github.com/tuliovp" target="_blank">Github</a></li>
         <li><a href="https://twitter.com/tuliovp_" target="_blank">Twitter</a></li>

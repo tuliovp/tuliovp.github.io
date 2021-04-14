@@ -1,10 +1,6 @@
-#newpost {
-display: none;
-}
+.show-hide {overflow: hidden; height: 100px; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+.show-hide.show {height: 500px;}
 
-#newpost.visible {
-display: block;
-}
 
 
 
