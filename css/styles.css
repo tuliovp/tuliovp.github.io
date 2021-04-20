@@ -203,21 +203,32 @@ textarea {
 	font: inherit
 }
 
-details {
-	display: block
+.link:hover {
+	cursor: default;
+  }
+  
+details:hover {
+	display: block;
+	cursor: pointer;
 }
 
-/* to hide detail tag arrow*/
-details > summary {
+/* to hide detail tag arrow */
+.details > summary {
 	list-style: none;
+	cursor: pointer
   }
-details summary::-webkit-details-marker {
+
+.details summary::-webkit-details-marker {
 	display:none;
+	cursor: pointer
   }
 
 summary {
-	display: list-item
+	display: list-item;
+	cursor: pointer
 }
+*/
+
 
 template {
 	display: none
