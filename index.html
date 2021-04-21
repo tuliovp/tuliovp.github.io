@@ -109,8 +109,52 @@
               <span style="color:gray; font-size: 15px;">Brazil, 2010 – 2013</p>
           </div>
         </a>
+        <li><a>Certifications</a></li>
+        <a><li onclick="toggleClass('#languages')">Languages</li>
+          <div style="font-size: 16px;" onclick="toggleClass('#languages')" class="hidden" id="languages">
+            <br>
+            <div class="skill-bars">
+              <div class="bar">
+                <div class="info">
+                  <span style="font-size: 15px;">Portuguese</span>
+                </div>
+                <div class="progress-line portuguese">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span style="font-size: 15px;">English</span>
+                </div>
+                <div class="progress-line english">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span style="font-size: 15px;">Spanish</span>
+                </div>
+                <div class="progress-line spanish">
+                  <span></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="info">
+                  <span style="font-size: 15px;">French</span>
+                </div>
+                <div class="progress-line french">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>           
+      </ul>
+      <ul>
+        <h2>Work</h2> 
         <details class="details">
-          <summary>Work Experience</summary>
+          <summary>Experience</summary>
           <p>
             <details>
               <p><summary><b>Programme Coordinator</b>
@@ -339,51 +383,7 @@
             </div>
           </div>
         </a>        
-        <li><a>Certifications</a></li>
-        <a><li onclick="toggleClass('#languages')">Languages</li>
-          <div style="font-size: 16px;" onclick="toggleClass('#languages')" class="hidden" id="languages">
-            <br>
-            <div class="skill-bars">
-              <div class="bar">
-                <div class="info">
-                  <span style="font-size: 15px;">Portuguese</span>
-                </div>
-                <div class="progress-line portuguese">
-                  <span></span>
-                </div>
-              </div>
-              <div class="bar">
-                <div class="info">
-                  <span style="font-size: 15px;">English</span>
-                </div>
-                <div class="progress-line english">
-                  <span></span>
-                </div>
-              </div>
-              <div class="bar">
-                <div class="info">
-                  <span style="font-size: 15px;">Spanish</span>
-                </div>
-                <div class="progress-line spanish">
-                  <span></span>
-                </div>
-              </div>
-              <div class="bar">
-                <div class="info">
-                  <span style="font-size: 15px;">French</span>
-                </div>
-                <div class="progress-line french">
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>   
-      </ul>
-      <ul>
-        <h2>Work</h2> 
         <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies</a></li>
-        <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>
         <li><a class="disabled">Research</a></li>
         <li><a class="disabled">Competitions</a></li>
       </ul>
