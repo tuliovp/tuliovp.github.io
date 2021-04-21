@@ -1417,20 +1417,65 @@ audio {
   background: #000;
   animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
-.bar .progress-line.html span{
-  width: 90%;
+.bar .progress-line.startups span{
+  width: 100%;
 }
-.bar .progress-line.css span{
+.bar .progress-line.prod span{
   width: 60%;
 }
-.bar .progress-line.jquery span{
-  width: 85%;
+.bar .progress-line.proj span{
+  width: 80%;
 }
-.bar .progress-line.python span{
+.bar .progress-line.data span{
   width: 50%;
 }
-.bar .progress-line.mysql span{
-  width: 75%;
+.bar .progress-line.cd span{
+  width: 100%;
+}
+.bar .progress-line.ux span{
+	width: 90%;
+}
+.bar .progress-line.crm span{
+width: 90%;
+}
+.bar .progress-line.agile span{
+	width: 90%;
+}
+.bar .progress-line.ab span{
+	width: 60%;
+}
+.bar .progress-line.web span{
+	width: 18%;
+}
+.bar .progress-line.sql span{
+	width: 50%;
+}
+.bar .progress-line.python span{
+	width: 50%;
+}
+.bar .progress-line.r span{
+	width: 30%;
+}
+.bar .progress-line.ml span{
+	width: 20%;
+}
+.bar .progress-line.stats span{
+	width: 30%;
+}
+.bar .progress-line.dv span{
+	width: 50%;
+}
+.bar .progress-line.portuguese span{
+	width: 100%;
+}
+.bar .progress-line.english span{
+	width: 100%;
+}
+.bar .progress-line.spanish span{
+	width: 80%;
+}
+.bar .progress-line.french span{
+	width: 30%;
 }
 .progress-line span::before{
   position: absolute;
@@ -1448,7 +1493,7 @@ audio {
 }
 .progress-line span::after{
   position: absolute;
-  top: -28px;
+  top: -38px;
   right: 0;
   font-weight: 500;
   background: #000;
@@ -1464,20 +1509,65 @@ audio {
     opacity: 1;
   }
 }
-.progress-line.html span::after{
-  content: "90%";
+.progress-line.startups span::after{
+  content: ">10 years";
 }
-.progress-line.css span::after{
-  content: "60%";
+.progress-line.prod span::after{
+  content: "6 years";
 }
-.progress-line.jquery span::after{
-  content: "85%";
+.progress-line.proj span::after{
+  content: "8 years";
+}
+.progress-line.data span::after{
+  content: "5 years";
+}
+.progress-line.cd span::after{
+  content: ">10 years";
+}
+.progress-line.ux span::after{
+	content: "9 years";
+}
+.progress-line.crm span::after{
+	content: "9 years";
+}
+.progress-line.agile span::after{
+	content: "9 years";
+}
+.progress-line.ab span::after{
+	content: "6 years";
+}
+.progress-line.web span::after{
+	content: "1 year";
+}
+.progress-line.sql span::after{
+	content: "5 years";
 }
 .progress-line.python span::after{
-  content: "50%";
+	content: "5 years";
 }
-.progress-line.mysql span::after{
-  content: "75%";
+.progress-line.r span::after{
+	content: "3 years";
+}
+.progress-line.ml span::after{
+	content: "2 years";
+}
+.progress-line.stats span::after{
+	content: "3 years";
+}
+.progress-line.dv span::after{
+	content: "5 years";
+}
+.progress-line.portuguese span::after{
+	content: "Fluent";
+}
+.progress-line.english span::after{
+	content: "Fluent";
+}
+.progress-line.spanish span::after{
+	content: "Advanced";
+}
+.progress-line.french span::after{
+	content: "Intermediate";
 }
 
 /* END skills progress bar animated */
