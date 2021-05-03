@@ -49,7 +49,7 @@ function scrollToSmoothly(pos, time) {
 
 // Song player
 document.getElementById("playAudio").addEventListener("click", function(){
-  var audio = document.getElementById('testAudio');
+  var audio = document.getElementById('Audio');
 if(this.className == 'is-playing'){
   this.className = "";
   this.innerHTML = "Play"
