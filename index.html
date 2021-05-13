@@ -62,9 +62,11 @@
     </div>
   </section>
 
-
+<!--Menu-->
   <section id="main" class="main">
     <div class="container">
+
+      <!--About-->
       <ul>
         <h2>About</h2>
         <a><li onclick="toggleClass('#bio')">Bio</li>
@@ -112,27 +114,91 @@
               <span style="color:gray; font-size: 15px;">Brazil, 2010 – 2013</p>
           </div>
         </a>
+        <!--Certifications oficial-->
         <details class="details">
           <summary>Certifications (that matters)</summary>
           <br><p style="font-size: 15px;">Click to enlarge</p>
+          <!-- Images used to open the lightbox -->
+          <div class="row">
+            <div class="column">
+              <img src="/media/essex.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="/media/pmp.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="/media/udacity_ds.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="/media/chevening.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+          </div>
 
-      <!-- Images used to open the lightbox -->
-      <div class="row">
-        <div class="column">
-          <img src="/media/essex.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="/media/pmp.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="/media/udacity_ds.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="/media/chevening.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-      </div>
+        </details><a></a>
 
-    </details><a></a>
+        <!--Certifications test-->
+        <details class="details">
+          <summary>Certifications (that matters)</summary>
+          <div class="row">
+            <!-- Trigger/Open The Modal -->
+            <div class="column"></div>
+            <h2>1st Modal</h2>
+
+            <!-- Trigger/Open The Modal -->
+            <button class="modal-button" href="#myModal1">Open Modal</button>
+            
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">×</span>
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the Modal Body1</p>
+                  <p>Some other text...</p>
+                </div>
+                <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
+            
+            </div>
+            
+            <h2>2nd Modal</h2>
+            
+            <!-- Trigger/Open The Modal -->
+            <button class="modal-button" href="#myModal2">Open Modal</button>
+            
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">×</span>
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the Modal Body2</p>
+                  <p>Some other text...</p>
+                  <img src="/media/essex.png" style="width:100%">
+                </div>
+                <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
+            
+            </div>
+
+
+
+                 
+          </div>
+
+        </details><a></a>
 
       <!-- The [Certifications] Modal/Lightbox -->
       <div id="myModal" class="modal">
@@ -231,6 +297,7 @@
         <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>           
       </ul>
       
+      <!--Work-->
       <ul>
         <h2>Work</h2> 
         <details class="details">
@@ -517,6 +584,8 @@
         <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies // Research</a></li>
         <li><a class="disabled">Competitions</a></li>
       </ul>
+
+      <!--Contact-->
       <ul>
         <h2>Contact</h2>
         <li><a onclick="toggletext()" id="email">Email</a></li>          
@@ -525,6 +594,7 @@
         <li><a href="https://twitter.com/tuliovp_" target="_blank">Twitter</a></li>
         <li><a href="https://www.kaggle.com/tuliovp" target="_blank">Kaggle</a></li>
       </ul>
+
     </div>
   </section>
 
@@ -532,74 +602,18 @@
     <div class="container">
       <h2>Case studies // Research</h2>
 
-      <!-- Images used to open the lightbox -->
-      <div class="row">
-        <div class="column">
-          <img src="/media/tab_icon.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-        </div>
-        <div class="column">
-          <img src="img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-      </div>
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">Open Modal</button>
 
-      <!-- The Modal/Lightbox -->
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
+      <!-- The Modal -->
+      <div id="modal_portfolio" class="modal">
+
+        <!-- Modal content -->
         <div class="modal-content">
-
-          <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img src="/media/tab_icon.png" style="width:100%">
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            <img src="img2_wide.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img src="img3_wide.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            <img src="img4_wide.jpg" style="width:100%">
-          </div>
-
-          <!-- Next/previous controls -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-          <!-- Caption text -->
-          <div class="caption-container">
-            <p id="caption"></p>
-          </div>
-
-          <!-- Thumbnail image controls -->
-          <div class="column">
-            <img class="demo" src="/media/tab_icon.png" onclick="currentSlide(1)" alt="Nature">
-          </div>
-
-          <div class="column">
-            <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
-          </div>
-
-          <div class="column">
-            <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
-          </div>
-
-          <div class="column">
-            <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
-          </div>
+          <span class="close_portfolio">&times;</span>
+          <p>Some text in the Modal..</p>
+          </div> 
         </div>
-      </div>
 
     </div>
   </section>
@@ -608,33 +622,33 @@
     <div class="container">
       <h2>Notes</h2>
       <div class="note">
-         <div class="note__date">13 06 15</div>
-         <div class="note__content">
-           <div onclick="toggleClass('#onconsciousness')" class="note__title">On consciousness </div>
-           <div class="hidden" id="onconsciousness"><br><p>Consciousness is our newest stage, the latest feature of what is organic; it is, therefore, what we have of less finished and robust. It surprises me that we treat consciousness as a unit of the organism, isolating it from every other biological asset with a ridiculous overestimation in such a way that prevents us from developing it even further, as we believe we already have it.</p></div>
-         </div>
+          <div class="note__date">13 06 15</div>
+          <div class="note__content">
+            <div onclick="toggleClass('#onconsciousness')" class="note__title">On consciousness </div>
+            <div class="hidden" id="onconsciousness"><br><p>Consciousness is our newest stage, the latest feature of what is organic; it is, therefore, what we have of less finished and robust. It surprises me that we treat consciousness as a unit of the organism, isolating it from every other biological asset with a ridiculous overestimation in such a way that prevents us from developing it even further, as we believe we already have it.</p></div>
+          </div>
       </div>
       <div class="note">
-         <div class="note__date">15 10 18</div>
-         <div class="note__content">
-           <div onclick="toggleClass('#onpassion')" class="note__title">On passion</div>
-           <div class="hidden" id="onpassion"><br><p>There is an interesting pattern of synaptic behaviour that can only be achieved by carrying an inexcusably open heart, minimizing the illusion of control to near-zero. Passion is a self-indulging, highly inflammable fuel. It allows a special peace of mind which can only materialize from the sweet taste of purpose. It is right there - where the limitations of logic no longer allow us to acknowledge because of its extreme subtlety - that uninhabited instincts as such allow us to begin the realm of fullness; and the sensation of having now entered this realm arouses the excitement of all other instincts, previously limited, optimizing mental energy in a self-sufficient process.</p></div>
-         </div>
+          <div class="note__date">15 10 18</div>
+          <div class="note__content">
+            <div onclick="toggleClass('#onpassion')" class="note__title">On passion</div>
+            <div class="hidden" id="onpassion"><br><p>There is an interesting pattern of synaptic behaviour which can only be achieved by carrying an inexcusably open heart, minimizing the illusion of control to near-zero. Passion is a self-indulging, highly inflammable fuel. It allows a special peace of mind which can only materialize from the sweet taste of purpose. It is right there - where the limitations of logic no longer allow us to acknowledge because of its extreme subtlety - that uninhabited instincts as such allow us to begin the realm of fullness; and the sensation of having now entered this realm arouses the excitement of all other instincts, previously limited, optimizing mental energy in a self-sufficient process.</p></div>
+          </div>
       </div>
       <div class="note">
         <div class="note__date">06 05 19</div>
         <div class="note__content">
-          <div onclick="toggleClass('#ontruths')" class="note__title">On truths</div>
-          <div class="hidden" id="ontruths"><br><p>Small souls are always bursting with absolute truths and abhor doubts - like a disease - finding, sooner or later, a moment of emergency to which they are moved in order to heal them. They seek, in fact, a desperate antidote: certainty, which generates a pleasant sensation, whereas doubt does not. Doubt is an anxious idea that causes discomfort. Now, beings do not live in discomfort, they survive. Then there is science; the goal of science would be to provide the pleasure of the methodology, certainties, and identified patterns. No, this is not what happens: doubt and certainty are so in harmony with each other that those who want to taste the most of one must taste the most of the other.</p></div>
+          <div onclick="toggleClass('#ontruths')" class="note__title">On truth</div>
+          <div class="hidden" id="ontruths"><br><p>Most souls are always bursting with absolute truths and abhor doubts - like a disease - finding, sooner or later, a moment of emergency to which they are moved to heal them. They seek, in fact, a desperate antidote: certainty, which generates a pleasant sensation, whereas doubt does not. Doubt is an anxious idea that causes discomfort. Now, beings do not live in discomfort, they survive. Then there is science; the goal of science would be to provide the pleasure of the methodology, certainties, and identified patterns. No, this is not what happens: doubt and certainty are so in harmony with each other that those who want to taste the most of one must taste the most of the other.</p></div>
         </div>
-     </div>
-     <div class="note">
-      <div class="note__date">10 05 21</div>
-      <div class="note__content">
-        <div onclick="toggleClass('#onspace')" class="note__title">On space exploration</div>
-        <div class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might become an impossible or an inevitable phenomenon (ie. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very specific order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, as well as the microscopic historical slice in which our civilization is embedded within the Universe's narrative, in addition to all the sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply understanding this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration, creating a cross-nation human bond - the first treasure presented by the cosmos to these contemporary navigators.</p></div>
       </div>
-   </div>
+      <div class="note">
+        <div class="note__date">10 05 21</div>
+        <div class="note__content">
+          <div onclick="toggleClass('#onspace')" class="note__title">On space exploration</div>
+          <div class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might become an improbable or an inevitable phenomenon (ie. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very specific order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, as well as the microscopic historical slice in which our civilization is embedded within, in addition to all the sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply understanding this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration, creating a cross-nation human bond - the first treasure presented by the cosmos to these contemporary navigators.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -670,6 +684,7 @@
   </footer>
 
   <script src="/js/script.js" charset="utf-8"></script>
+
 
 </body>
 
