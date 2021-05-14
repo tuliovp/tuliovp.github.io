@@ -1,3 +1,4 @@
+// toggle in pure js
 function toggleClass(el){
   el = document.querySelector(el);
   className = 'hidden';
@@ -16,6 +17,7 @@ function toggleClass(el){
   }
 }
 
+// show email when clicked
 function toggletext() {
   const x = document.getElementById("email");
   if (x.innerHTML === "Email") {
@@ -25,6 +27,7 @@ function toggletext() {
   }
 }
 
+// scroll down with delay
 function scrollToSmoothly(pos, time) {
   var currentPos = window.pageYOffset;
   var start = null;
@@ -47,7 +50,7 @@ function scrollToSmoothly(pos, time) {
 }
 
 
-// Song player
+// song player
 document.getElementById("playAudio").addEventListener("click", function(){
   var audio = document.getElementById('Audio');
 if(this.className == 'is-playing'){
@@ -62,19 +65,23 @@ if(this.className == 'is-playing'){
 
 });
 
+//
 // Open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
 
+//
 // Close the Modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
+//
 var slideIndex = 1;
 showSlides(slideIndex);
 
+//
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
