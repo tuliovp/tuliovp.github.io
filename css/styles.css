@@ -871,18 +871,18 @@ audio {
 	line-height: 1.6
 }
 
-.music {
+.media {
 	margin: 44px 0
 }
 
 @media screen and (min-width:42em) {
-	.music {
+	.media {
 		margin: 84px 0
 	}
 }
 
 @media screen and (min-width:42em) {
-	.music .container {
+	.media .container {
 		display: -webkit-box;
 		display: flex;
 		-webkit-box-pack: justify;
@@ -892,46 +892,112 @@ audio {
 }
 
 @media screen and (min-width:42em) {
-	.music .container>ul {
+	.media .container>ul {
 		width: 45%
 	}
 }
 
 @media screen and (min-width:64em) {
-	.music .container>ul {
+	.media .container>ul {
 		width: 30%
 	}
 }
 
-.music h2 {
+.media h2 {
 	width: 100%;
 	display: block;
 	font-size: 14px;
 	margin-bottom: 64px
 }
 
-.music ul {
+.media ul {
 	margin-bottom: 86px
 }
 
 @media screen and (min-width:42em) {
-	.music ul {
+	.media ul {
 		margin-bottom: 0
 	}
 }
 
-.music li {
+.media li {
 	padding-bottom: 27px;
 	margin-bottom: 32px;
 	border-bottom: 1px solid #000
 }
 
-.music button {
+.media button {
 	float: right;
 	font-size: 14px
 }
 
-/* [START] skills progress bar animated */
+/* [START] CASE STUDIES */
+
+.cases {
+	width: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 64px 0
+}
+
+.cases:nth-child(odd) {
+	text-align: right
+}
+
+@media screen and (min-width:42em) {
+	.cases:nth-child(odd) {
+		text-align: center
+	}
+}
+
+.cases:nth-child(even) {
+	text-align: left
+}
+
+@media screen and (min-width:42em) {
+	.cases:nth-child(even) {
+		text-align: center
+	}
+}
+
+@media screen and (min-width:42em) {
+	.cases {
+		width: 33.333%
+	}
+}
+
+@media screen and (min-width:64em) {
+	.cases {
+		width: 25%
+	}
+}
+
+@media screen and (min-width:100em) {
+	.cases {
+		width: 20%
+	}
+}
+
+.cases a {
+	display: block
+}
+
+.cases img {
+	width: 65%
+}
+
+@media screen and (min-width:42em) {
+	.cases img {
+		width: 50%
+	}
+}
+
+/* [END] CASE STUDIES] */
+
+
+/* [START] SKILLS PROGRESS BAR ANIMATED */
 
 /**/
 ::selection{
@@ -1165,7 +1231,7 @@ width: 90%;
 	content: "Intermediate";
 }
 
-/* [END] skills progress bar animated */
+/* [END] SKILLS PROGRESS BAR ANIMATED */
 
 
 /* [START] CERTIFICATES Modal/Lightbox  */
@@ -1215,6 +1281,19 @@ width: 90%;
 	padding: 0;
 	width: 90%;
 	max-width: 750px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.8s;
+	animation-name: animatetop;
+	animation-duration: 0.8s
+}
+
+.modal-header {
+    padding: 8px 16px 4px;
+    background-color: white;
+    color: black;
+	text-align: center;
+	font-size: 15px;
 }
 
 /**/
@@ -1231,7 +1310,7 @@ width: 90%;
 /**/
 .close:hover,
 .close:focus {
-	color: rgb(75, 73, 73);
+	color: rgb(109, 106, 106);
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -1298,8 +1377,8 @@ width: 90%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/**/
 /* Caption text */
+/*
 .caption-container {
 	text-align: center;
 	background-color: white;
@@ -1307,11 +1386,12 @@ width: 90%;
 	margin-bottom: -15px;
 	font-family: SF, sans-serif;
 }
+*/
 
 /**/
 img.demo {
 	opacity: 0.6;
-	padding: 10px 8px;
+	padding: 1px 8px;
 }
 
 /**/
@@ -1330,11 +1410,71 @@ img.hover-shadow {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* [END] CERTIFICATES Modal/Lightbox */
+/* [END] CERTIFICATES MODAL/LIGHTBOX */
 
 
 
+/* [START] CASE STUDIES MODAL */
 
+/* The Modal (background) */
+.case_studies .modal {
+    padding-top: 300px; /* Location of the box */
+}
+
+/* Modal Content */
+.case_studies .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatetop;
+    animation-duration: 0.8s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:-50px; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top: -50px; opacity:1}
+}
+
+/* The Close Button */
+.case_studies .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(104, 102, 102);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.case_studies .modal-header {
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
 
 
 
