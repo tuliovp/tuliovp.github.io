@@ -931,7 +931,7 @@ audio {
 	font-size: 14px
 }
 
-/* skills progress bar animated */
+/* [START] skills progress bar animated */
 
 /**/
 ::selection{
@@ -1165,14 +1165,10 @@ width: 90%;
 	content: "Intermediate";
 }
 
-/* END skills progress bar animated */
+/* [END] skills progress bar animated */
 
 
-
-
-
-
-/* START CERTIFICATES Modal/Lightbox  */
+/* [START] CERTIFICATES Modal/Lightbox  */
 
 /**/
 .row > .column {
@@ -1334,7 +1330,7 @@ img.hover-shadow {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* END CERTIFICATES Modal/Lightbox */
+/* [END] CERTIFICATES Modal/Lightbox */
 
 
 

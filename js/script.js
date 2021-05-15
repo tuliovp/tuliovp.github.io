@@ -66,7 +66,7 @@ if(this.className == 'is-playing'){
 });
 
 
-// CERTIFICATIONS MODAL
+// [START] CERTIFICATIONS MODAL
 
 //
 // Open the Modal
@@ -114,4 +114,19 @@ function showSlides(n) {
 }
 
 
+// [END] CERTIFICATIONS MODAL
 
+
+// [START] CLOSE WHEN CLICK OUTSIDE MODAL
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
