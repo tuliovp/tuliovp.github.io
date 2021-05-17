@@ -66,31 +66,30 @@ if(this.className == 'is-playing'){
 });
 
 
+// all page modals
+var modals = document.querySelectorAll('.modal');
+
 // [START] CERTIFICATIONS MODAL
 
-//
-// Open the Modal
+// open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
 
-//
-// Close the Modal
+// close the Modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-//
 var slideIndex = 1;
 showSlides(slideIndex);
 
-//
-// Next/previous controls
+// next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+// thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -113,17 +112,39 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-
 // [END] CERTIFICATIONS MODAL
 
 
+// [START] CASE STUDIES MODAL
 
+// create references to the modal...
+// var modal_case = document.getElementById('myModal_case');
+// to all cases -- note I'm using a class!
+var cases = document.getElementsByClassName('myCases');
+// the image in the modal
+var modalCaseImg = document.getElementById("caseImg");
+// and the caption in the modal
+// var captionText = document.getElementById("caption");
 
+// Go through all of the cases with our custom class
+for (var i = 0; i < cases.length; i++) {
+  var Case = cases[i];
+  // and attach our click listener for this case.
+  Case.onclick = function(evt) {
+    modal_case = document.querySelector(evt.target.getAttribute("href"));
+    modal_case.style.display = "block";
+    modalCaseImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+  }
+}
 
-// [START] CLOSE MODAL WHEN CLICK OUTSIDE OF IT
+var span = document.getElementsByClassName("close")[0];
 
-// All page modals
-var modals = document.querySelectorAll('.modal');
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// [END] CASE STUDIES MODAL
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -134,31 +155,27 @@ window.onclick = function(event) {
     }
 }
 
-// [END] CLOSE MODAL WHEN CLICK OUTSIDE OF IT
-
-
-
 
 
 // [START] CASE STUDIES MODAL
 
 // Get the button that opens the modal
-var btn = document.querySelectorAll("button.modal-button");
+//var btn = document.querySelectorAll("button.modal-button");
 
 // All page modals
-var modals = document.querySelectorAll('.modal');
+//var modals = document.querySelectorAll('.modal');
 
 // Get the <span> element that closes the modal
 var spans = document.getElementsByClassName("close");
 
 // When the user clicks the button, open the modal
-for (var i = 0; i < btn.length; i++) {
- btn[i].onclick = function(e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute("href"));
-    modal.style.display = "block";
- }
-}
+//for (var i = 0; i < btn.length; i++) {
+ //btn[i].onclick = function(e) {
+   // e.preventDefault();
+    //modal = document.querySelector(e.target.getAttribute("href"));
+    //modal.style.display = "block";
+ //}
+//}
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < spans.length; i++) {
@@ -170,12 +187,12 @@ for (var i = 0; i < spans.length; i++) {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-     for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     }
-    }
-}
+//window.onclick = function(event) {
+  //  if (event.target.classList.contains('modal')) {
+    // for (var index in modals) {
+      //if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     //}
+   // }
+//}
 
 // [END] CASE STUDIES MODAL

@@ -733,19 +733,6 @@ audio {
 	}
 }
 
-.case_studies .container {
-	display: -webkit-box;
-	display: flex;
-	flex-wrap: wrap
-}
-
-.case_studies h2 {
-	font-size: 14px;
-	margin-bottom: 64px;
-	width: 100%;
-	display: block
-}
-
 .photo {
 	width: 50%;
 	display: -webkit-box;
@@ -930,72 +917,6 @@ audio {
 	float: right;
 	font-size: 14px
 }
-
-/* [START] CASE STUDIES */
-
-.cases {
-	width: 50%;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-align: center;
-	align-items: center;
-	padding: 64px 0
-}
-
-.cases:nth-child(odd) {
-	text-align: right
-}
-
-@media screen and (min-width:42em) {
-	.cases:nth-child(odd) {
-		text-align: center
-	}
-}
-
-.cases:nth-child(even) {
-	text-align: left
-}
-
-@media screen and (min-width:42em) {
-	.cases:nth-child(even) {
-		text-align: center
-	}
-}
-
-@media screen and (min-width:42em) {
-	.cases {
-		width: 33.333%
-	}
-}
-
-@media screen and (min-width:64em) {
-	.cases {
-		width: 25%
-	}
-}
-
-@media screen and (min-width:100em) {
-	.cases {
-		width: 20%
-	}
-}
-
-.cases a {
-	display: block
-}
-
-.cases img {
-	width: 65%
-}
-
-@media screen and (min-width:42em) {
-	.cases img {
-		width: 50%
-	}
-}
-
-/* [END] CASE STUDIES] */
-
 
 /* [START] SKILLS PROGRESS BAR ANIMATED */
 
@@ -1233,7 +1154,6 @@ width: 90%;
 
 /* [END] SKILLS PROGRESS BAR ANIMATED */
 
-
 /* [START] CERTIFICATES Modal/Lightbox  */
 
 /**/
@@ -1412,6 +1332,84 @@ img.hover-shadow {
 
 /* [END] CERTIFICATES MODAL/LIGHTBOX */
 
+/* [START] CASE STUDIES */
+/* used to be the photo gallery or something */
+
+.case_studies .container {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap
+}
+
+.case_studies h2 {
+	font-size: 14px;
+	margin-bottom: 64px;
+	width: 100%;
+	display: block
+}
+
+.cases {
+	width: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 64px 0
+}
+
+.cases:nth-child(odd) {
+	text-align: right
+}
+
+@media screen and (min-width:42em) {
+	.cases:nth-child(odd) {
+		text-align: center
+	}
+}
+
+.cases:nth-child(even) {
+	text-align: left
+}
+
+@media screen and (min-width:42em) {
+	.cases:nth-child(even) {
+		text-align: center
+	}
+}
+
+@media screen and (min-width:42em) {
+	.cases {
+		width: 33.333%
+	}
+}
+
+@media screen and (min-width:64em) {
+	.cases {
+		width: 25%
+	}
+}
+
+@media screen and (min-width:100em) {
+	.cases {
+		width: 20%
+	}
+}
+
+.cases a {
+	display: block
+}
+
+.cases img {
+	width: 65%
+}
+
+@media screen and (min-width:42em) {
+	.cases img {
+		width: 50%
+	}
+}
+
+/* [END] CASE STUDIES GALLERY */
 
 
 /* [START] CASE STUDIES MODAL */
@@ -1476,6 +1474,44 @@ img.hover-shadow {
     color: white;
 }
 
+/* [START] PORTFOLIO MOUSE HOVER OVERLAY CAPTION */
+.cases * {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.cases .container {
+  position: relative;
+  width: 100%;
+  max-width: 3000px;
+}
+
+/* Make the image to responsive */
+.cases .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.cases .overlay {
+  position: relative;
+  bottom: 90px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.cases .container:hover .overlay {
+  opacity: 1;
+}
+/* [END] PORTFOLIO MOUSE HOVER OVERLAY CAPTION */
 
 
 
