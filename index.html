@@ -538,34 +538,98 @@
     </div>
   </section>
 
-  <!--Case Studies-->
+   <!--Case Studies-->
+  <section class="case_studies">
+    <h2 class="container">Case studies // Research</h2>
+  </section>
+
+  <!-- Control buttons -->
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('web')"> Web</button>
+    <button class="btn" onclick="filterSelection('data')"> Data</button>
+  <div>
+ 
   <section id="case_studies" class="case_studies">
     <div class="container">
-      <h2>Case studies // Research</h2>
 
-      <div class="cases">
+      <div class="cases filterDiv web">
+      
+        <!-- Trigger the Modal -->
+        <div class="container">
+          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
+          <div class="middle">
+            <a class="myCases text" id="myImg" href="#myModal1">Case Web</a>
+          </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal1" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content" id="caseImg">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <img src="/media/pmp.png" style="filter: grayscale(100%);">
+            </div>
+            <div class="modal-body" style="text-align: center;">
+              <h1 style="font-size: 32px;">Title</h1>
+              <p>Brief explanation</p>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
+                <div style="text-align: left; margin: 20px 50px;">
+                  <h1>Description</h1>
+                  <hr>
+                  <p>Some text...</p>
+                  <p>Some images</p>
+                  <br>
+                  <h1>Read more</h1>
+                  <hr>
+                  <p>This web application is available (...). 
+                    You can read the scientific paper on (...). 
+                    The source code of the project are on Github.</p>
+                    <br>
+                    <div class="row">
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
+                      </div>
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        
+
+      </div>
+
+      
+
+      <div class="cases filterDiv data">
     
         <!-- Trigger the Modal -->
         <div class="container">
-          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" alt="">
+          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case 01</a>
+            <a class="myCases text" id="myImg" href="#myModal1">Case Data</a>
           </div>
         </div>
-  
+    
         <!-- The Modal -->
         <div id="myModal1" class="modal">
-  
+
           <!-- Modal content -->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
-              <img src="/media/pmp.png">
+              <img src="/media/pmp.png" style="filter: grayscale(100%);">
             </div>
             <div class="modal-body" style="text-align: center;">
               <h1 style="font-size: 32px;">Title</h1>
               <p>Brief explanation</p>
-              <a class="btn1 btn-secondary btn1 text-uppercase hover-shadow" href="">Link</a>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
                 <div style="text-align: left; margin: 20px 50px;">
                   <h1>Description</h1>
                   <hr>
@@ -580,43 +644,46 @@
                     <br>
                     <div class="row">
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
                       </div>
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
                       </div>
                     </div>
                 </div>
             </div>
           </div>
         </div>
-      </div>
         
-      <div class="cases_div"></div>
+        
 
-      <div class="cases">
-  
+      </div>
+
+      
+    
+      <div class="cases filterDiv web data">
+    
         <!-- Trigger the Modal -->
         <div class="container">
-          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" alt="">
+          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case 01</a>
+            <a class="myCases text" id="myImg" href="#myModal1">Case Web & Data</a>
           </div>
         </div>
-  
+    
         <!-- The Modal -->
         <div id="myModal1" class="modal">
-  
+
           <!-- Modal content -->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
-              <img src="/media/pmp.png">
+              <img src="/media/pmp.png" style="filter: grayscale(100%);">
             </div>
             <div class="modal-body" style="text-align: center;">
               <h1 style="font-size: 32px;">Title</h1>
               <p>Brief explanation</p>
-              <a class="btn1 btn-secondary btn1 text-uppercase hover-shadow" href="">Link</a>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
                 <div style="text-align: left; margin: 20px 50px;">
                   <h1>Description</h1>
                   <hr>
@@ -631,68 +698,22 @@
                     <br>
                     <div class="row">
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
                       </div>
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
                       </div>
                     </div>
                 </div>
             </div>
           </div>
         </div>
+          
+        
+        
       </div>
 
-      <div class="cases_div"></div>
-  
-      <div class="cases">
-  
-        <!-- Trigger the Modal -->
-        <div class="container">
-          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" alt="">
-          <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case 01</a>
-          </div>
-        </div>
-  
-        <!-- The Modal -->
-        <div id="myModal1" class="modal">
-  
-          <!-- Modal content -->
-          <div class="modal-content" id="caseImg">
-            <div class="modal-header">
-              <span class="close">×</span>
-              <img src="/media/pmp.png">
-            </div>
-            <div class="modal-body" style="text-align: center;">
-              <h1 style="font-size: 32px;">Title</h1>
-              <p>Brief explanation</p>
-              <a class="btn1 btn-secondary btn1 text-uppercase hover-shadow" href="">Link</a>
-                <div style="text-align: left; margin: 20px 50px;">
-                  <h1>Description</h1>
-                  <hr>
-                  <p>Some text...</p>
-                  <p>Some images</p>
-                  <br>
-                  <h1>Read more</h1>
-                  <hr>
-                  <p>This web application is available (...). 
-                    You can read the scientific paper on (...). 
-                    The source code of the project are on Github.</p>
-                    <br>
-                    <div class="row">
-                      <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
-                      </div>
-                      <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase hover-shadow" href="">Link</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       
     </div>
   </section>
@@ -700,7 +721,8 @@
   <!--Notes-->
   <section id="notes" class="notes">
     <div class="container">
-      <h2>Notes</h2>
+      <br>
+      <h2 >Notes</h2>
       <div class="note">
           <div class="note__date">13 06 15</div>
           <div class="note__content">
@@ -726,7 +748,7 @@
         <div class="note__date">10 05 21</div>
         <div class="note__content">
           <div onclick="toggleClass('#onspace')" class="note__title">On space exploration</div>
-          <div class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might turn out as an improbable or an inevitable phenomenon (i.e. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very rare order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, plus the microscopic historical slice in which our civilization is embedded within and all the potential sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply comprehending this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration, creating a cross-nation planetary human bond - the first treasure presented by the cosmos to these contemporary navigators.</p></div>
+          <div class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might turn out as an improbable or an inevitable phenomenon (i.e. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very rare order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, plus the microscopic historical slice in which our civilization is embedded within and all the potential sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply comprehending this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration, creating a cross-nation human bond - the first treasure presented by the cosmos to these contemporary navigators.</p></div>
         </div>
       </div>
     </div>

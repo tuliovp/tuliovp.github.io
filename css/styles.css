@@ -227,9 +227,10 @@ details:hover {
 
 summary {
 	display: list-item;
-	cursor: pointer
+	cursor: pointer;
+	
 }
-
+/**/
 
 
 template {
@@ -1606,6 +1607,11 @@ img.hover-shadow {
 	
 }
 
+.btn1:hover {
+	background-color: black;
+	color: white;
+}
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -1630,6 +1636,13 @@ img.hover-shadow {
 	
 }
 
+.btn:hover {
+	background-color: black;
+	color: white;
+}
+
+
+
 .cases h1 {
 	font-family: Spectral; 
 	
@@ -1638,3 +1651,15 @@ img.hover-shadow {
 .cases hr {
 	margin: 0 0 20px 0;
 }
+
+/* Filtering buttons */
+
+.filterDiv {
+	display: none; /* Hidden by default */
+  }
+
+  /* The "show" class is added to the filtered elements */
+.show {
+	display: block;
+  }
+  
