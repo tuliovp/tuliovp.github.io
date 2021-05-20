@@ -1538,7 +1538,7 @@ img.hover-shadow {
 	min-width: fit-content;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 2px ;}
 
 
 .case_studies .modal-header {
@@ -1550,6 +1550,13 @@ img.hover-shadow {
     padding-bottom: 250px;
     background-color: white;
     color: white;
+	min
+}
+
+@media screen and (max-width: 530px) {
+	.case_studies .modal-header {
+		padding-bottom: 150px;
+	}
 }
 
 .btn:not(:disabled):not(.disabled) {
