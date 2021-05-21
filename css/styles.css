@@ -1360,7 +1360,7 @@ img.hover-shadow {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
-	padding: 64px 0
+	padding: 25px 10px 25px 0;
 }
 
 .cases_div {
@@ -1663,3 +1663,23 @@ img.hover-shadow {
 	display: block;
   }
   
+#myBtnContainer {
+	height: 30px;
+}
+
+#myBtnContainer .row {
+	left: 50%;
+	position: relative;
+	display: inline-block;
+	transform: translate(-50%, -50%);
+}
+
+#myBtnContainer .column {
+	width: 80px;
+	min-width: fit-content;
+}
+
+#myBtnContainer .btn1 {
+	margin: 30px 10px 10px 0;
+}
+
