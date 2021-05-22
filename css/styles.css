@@ -952,6 +952,14 @@ audio {
   font-size: 17px;
   opacity: 0;
   animation: showText 0.4s 0.5s linear forwards;
+  
+}
+
+.skill-bars .bar .info span{
+	font-weight: 500;
+	font-size: 17px;
+	opacity: 0;
+	animation: showText 0.4s 0.5s linear forwards;
 }
 
 @media screen and (max-width:64em) {
@@ -976,7 +984,7 @@ audio {
 .skill-bars .bar .progress-line{
   height: 10px;
   width: 100%;
-  background: #f0f0f0;
+  background: whitesmoke;
   position: relative;
   transform: scaleX(0);
   transform-origin: left;
@@ -1009,16 +1017,16 @@ audio {
   width: 80%;
 }
 .bar .progress-line.data span{
-  width: 50%;
+  width: 40%;
 }
 .bar .progress-line.cd span{
   width: 100%;
 }
 .bar .progress-line.ux span{
-	width: 90%;
+	width: 50%;
 }
 .bar .progress-line.crm span{
-width: 90%;
+width: 60%;
 }
 .bar .progress-line.agile span{
 	width: 90%;
@@ -1033,10 +1041,10 @@ width: 90%;
 	width: 50%;
 }
 .bar .progress-line.python span{
-	width: 50%;
+	width: 30%;
 }
 .bar .progress-line.r span{
-	width: 30%;
+	width: 20%;
 }
 .bar .progress-line.ml span{
 	width: 20%;
@@ -1045,7 +1053,7 @@ width: 90%;
 	width: 30%;
 }
 .bar .progress-line.dv span{
-	width: 50%;
+	width: 40%;
 }
 .bar .progress-line.portuguese span{
 	width: 100%;
@@ -1059,6 +1067,8 @@ width: 90%;
 .bar .progress-line.french span{
 	width: 30%;
 }
+
+/* 
 .progress-line span::before{
   position: absolute;
   content: "";
@@ -1073,15 +1083,16 @@ width: 90%;
   opacity: 0;
   animation: showText2 0.4s 0.9s linear forwards;
 }
+*/
 .progress-line span::after{
   position: absolute;
-  top: 20px;
-  right: -30px;
+  top: 12px;
+  right: 0;
   font-weight: 500;
   background: #fff;
   color: #000;
   padding: 1px 8px;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 3px;
   opacity: 0;
   animation: showText2 0.4s 0.9s linear forwards;
@@ -1093,64 +1104,70 @@ width: 90%;
   }
 }
 .progress-line.startups span::after{
-  content: ">10 years";
+  content: ">10 yrs";
 }
 .progress-line.prod span::after{
-  content: "6 years";
+  content: "6 yrs";
 }
 .progress-line.proj span::after{
-  content: "8 years";
+  content: "8 yrs";
 }
 .progress-line.data span::after{
-  content: "5 years";
+  content: "4 yrs";
 }
 .progress-line.cd span::after{
-  content: ">10 years";
+  content: ">10 yrs";
 }
 .progress-line.ux span::after{
-	content: "9 years";
+	content: "5 yrs";
 }
 .progress-line.crm span::after{
-	content: "9 years";
+	content: "6 yrs";
 }
 .progress-line.agile span::after{
-	content: "9 years";
+	content: "9 yrs";
 }
 .progress-line.ab span::after{
-	content: "6 years";
+	content: "6 yrs";
 }
 .progress-line.web span::after{
-	content: "1 year";
+	content: "1 yr";
 }
 .progress-line.sql span::after{
-	content: "5 years";
+	content: "5 yrs";
 }
 .progress-line.python span::after{
-	content: "5 years";
+	content: "3 yrs";
 }
 .progress-line.r span::after{
-	content: "3 years";
+	content: "2 yrs";
 }
 .progress-line.ml span::after{
-	content: "2 years";
+	content: "2 yrs";
 }
 .progress-line.stats span::after{
-	content: "3 years";
+	content: "3 yrs";
 }
 .progress-line.dv span::after{
-	content: "5 years";
+	content: "4 yrs";
 }
 .progress-line.portuguese span::after{
-	content: "Fluent";
+	content: "++++";
+	font-size: large;
 }
 .progress-line.english span::after{
-	content: "Fluent";
+	content: "++++";
+	font-size: large;
 }
 .progress-line.spanish span::after{
-	content: "Advanced";
+	content: "+++";
+	font-size: large;
+	
 }
 .progress-line.french span::after{
-	content: "Intermediate";
+	content: "++";
+	font-size: large;
+
 }
 
 /* [END] SKILLS PROGRESS BAR ANIMATED */
