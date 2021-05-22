@@ -936,7 +936,7 @@ audio {
 }
 
 .skill-bars .bar{
-  margin: 20px 0;
+  margin: 20px 0 0 15px;
 }
 
 .skill-bars .bar:first-child{
@@ -955,12 +955,6 @@ audio {
   
 }
 
-.skill-bars .bar .info span{
-	font-weight: 500;
-	font-size: 17px;
-	opacity: 0;
-	animation: showText 0.4s 0.5s linear forwards;
-}
 
 @media screen and (max-width:64em) {
 	.skill-bars {
@@ -970,6 +964,13 @@ audio {
 }
 
 @media screen and (max-width:100em) {
+	.skill-bars {
+		width: 100%;
+		
+	}
+}
+
+@media screen and (min-width:1600px) {
 	.skill-bars {
 		width: 100%;
 		

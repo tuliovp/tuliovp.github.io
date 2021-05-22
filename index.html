@@ -555,6 +555,15 @@
       <div class="column">
         <button class="btn1" onclick="filterSelection('data')">Data</button>
       </div>
+      <div class="column">
+        <button class="btn1" onclick="filterSelection('viz')">Viz</button>
+      </div>
+      <div class="column">
+        <button class="btn1" onclick="filterSelection('design')">Design</button>
+      </div>
+      <div class="column">
+        <button class="btn1" onclick="filterSelection('statistics')">Statistics</button>
+      </div>
     </div>
   </div>
  
@@ -762,9 +771,28 @@
     </div>
   </section>
 
-  <!--Music and Cinema-->
+  <!-- Cool things, Music and Cinema-->
   <section id="music" class="media">
     <div class="container">
+      <ul>
+        <h2>Cool things</h2>
+        <li>
+          <a onclick="toggleClass('#articles')">Articles</a>
+          <button onclick="toggleClass('#articles')">Open</button>
+            <div class="hidden" id="articles">
+              <br><br><p>Using the Sun as a Cosmic Telescope<button onclick="window.open('https://blogs.scientificamerican.com/observations/using-the-sun-as-a-cosmic-telescope/','_blank')" class="control">Read</button></p>
+              <br><p>Bacteria Use Brainlike Bursts of Electricity to Communicate<button onclick="window.open('https://www.scientificamerican.com/article/bacteria-use-brainlike-bursts-of-electricity-to-communicate/','_blank')" class="control">Read</button></p>
+            </div>
+        </li>
+        <li>
+          <a onclick="toggleClass('#research')">Research</a>
+          <button onclick="toggleClass('#research')">Open</button>
+            <div class="hidden" id="research">
+              <br><br><p>Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
+              <br><p>Information Management: A Proposal (Tim Berners-Lee, 1989)<button onclick="window.open('https://cds.cern.ch/record/369245/files/dd-89-001.pdf','_blank')" class="control">Read</button></p>
+            </div>
+        </li>
+      </ul>
       <ul>
         <h2>Jam</h2>
         <li>
