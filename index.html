@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
 
-  <!--viewport meta tag gives the browser instructions on how to control the page's dimensions and scaling -->
+  <!--viewport meta tag gives the browser instructions on how to control the page's dimensions and scaling-->
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   
   <!--meta description tag is the 160 character snippet used to summarize a web page's content. Search engines use in search results to let visitors know what a page is about before they click on it.-->
@@ -12,7 +12,7 @@
 
   <title>Tulio V</title>
 
-  <!-- Google Tag Manager -->
+  <!--[START] google tag manager-->
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,21 +20,8 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-W68VVFC');
   </script>
-  <!-- End Google Tag Manager -->
+  <!--[END] google tag manager-->
   
-  <!--Facebook Open Graph meta tags-->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Tulio V">
-  <meta property="og:url" content="https://tuliovp.github.io/">
-  <meta property="og:image" content="">
-  <meta property="og:description" content="">
-
-   <!--Twitter Open Graph meta tags-->
-  <meta name="twitter:card" content="">
-  <meta name="twitter:title" content="Tulio V">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
-
   <link rel="shortcut icon" href="/media/tab_icon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Spectral:300&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
@@ -43,37 +30,37 @@
 
 <body>
   
-  <!-- Google Tag Manager (noscript) -->
+  <!--[START] google tag manager (noscript)-->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W68VVFC"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <!--[END] google tag manager (noscript)-->
 
-  <!--My name at the top-->
+  <!--name at the top-->
   <header class="header">
     <div class="container">
       Túlio V
     </div>
   </header>
 
-  <!--My quote at the top-->
+  <!--quote at the top-->
   <section class="hero">
     <div class="container">
       <h1>I use data to enhance experiences.</h1>
     </div>
   </section>
 
-  <!--Menu-->
+  <!--menu-->
   <section id="main" class="main">
     <div class="container">
 
-      <!--About-->
+      <!--about-->
       <ul>
         <h2>About</h2>
-        <!--Bio-->
+        <!--bio-->
         <a><li onclick="toggleClass('#bio')">Bio</li>
-          <div style="font-size: 16px;" class="hidden" id="bio">
+          <div onclick="toggleClass('#bio')" style="font-size: 16px;" class="hidden" id="bio">
             <br>
             <p style="font-size: 18px;">Hi, I'm Tulio.</p>
             <p>I’m passionate about data analysis, product management, behavioural 
@@ -98,7 +85,7 @@
               of 63,000 applicants globally.</p>
           </div>
         </a>
-        <!--Education-->
+        <!--education-->
         <a><li onclick="toggleClass('#education')">Education</li>
           <div onclick="toggleClass('#education')" class="hidden" id="education">
             <br>
@@ -118,11 +105,11 @@
               <span style="color:gray; font-size: 15px;">Brazil, 2010 – 2013</p>
           </div>
         </a>
-        <!--Certifications-->
+        <!--certifications-->
         <details class="details">
           <summary>Certifications (that matters)</summary>
           <br><p style="font-size: 15px;">Click to enlarge</p>
-          <!-- Images used to open the lightbox -->
+          <!-- images used to open the lightbox -->
           <div class="row">
             <div class="column">
               <img src="/media/essex.png" style="filter: grayscale(100%);" onclick="openModal();currentSlide(1)" class="hover-shadow">
@@ -139,7 +126,7 @@
           </div>
 
         </details><a></a>
-            <!-- START [Certifications] Modal/Lightbox -->
+            <!--[START] certifications modal/lightbox-->
             <div id="myModal" class="modal">
               <span class="close cursor" onclick="closeModal()">&times;</span>
               <div class="modal-content">
@@ -189,8 +176,8 @@
                 
               </div>
             </div>
-            <!-- END [Certifications] Modal/Lightbox -->
-        <!--Languages-->
+            <!--[END] certifications modal/lightbox-->
+        <!--languages-->
         <a><li onclick="toggleClass('#languages')">Proficiency</li>
           <div style="font-size: 16px;" onclick="toggleClass('#languages')" class="hidden" id="languages">
             <br>
@@ -230,14 +217,14 @@
             </div>
           </div>
         </a>
-        <!--Notes-->
+        <!--notes-->
         <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>           
       </ul>
       
-      <!--Work-->
+      <!--work-->
       <ul>
         <h2>Work</h2> 
-        <!--Experience-->
+        <!--experience-->
         <details class="details">
           <summary>Experience</summary>
           <p>
@@ -331,7 +318,7 @@
             </details> 
           </p>
         </details><a></a>
-        <!--Volunteering-->
+        <!--volunteering-->
         <details class="details">
           <summary>Volunteering</summary>
           <p>
@@ -381,9 +368,9 @@
             </details>            
           </p>
         </details> 
-        <!--Expertise // Skills-->
+        <!--expertise / skills-->
         </details><a></a>        
-        <a><li onclick="toggleClass('#skills')">Expertise / Skills</li>
+        <a><li onclick="toggleClass('#skills')">Expertise &nbsp;/&nbsp; Skills</li>
           <div onclick="toggleClass('#skills')" class="hidden" id="skills">
             <br>
             <p style="font-size: 17px;">Expertise</p>
@@ -520,13 +507,13 @@
             </div>
           </div>
         </a>      
-        <!--Case studies / Research--> 
-        <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies / Research</a></li>
-        <!--Competitions-->
+        <!--case studies / research--> 
+        <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies &nbsp;/&nbsp; Research</a></li>
+        <!--competitions-->
         <li><a class="disabled">Competitions</a></li>
       </ul>
 
-      <!--Contact-->
+      <!--contact-->
       <ul>
         <h2>Contact</h2>
         <li><a onclick="toggletext()" id="email">Email</a></li>          
@@ -538,12 +525,12 @@
     </div>
   </section>
 
-   <!--Case Studies-->
+   <!--case studies-->
   <section  id="case_studies" class="case_studies">
-    <h2 class="container">Case studies / Research</h2>
+    <h2 class="container">Case studies &nbsp;/&nbsp; Research</h2>
   </section>
 
-  <!-- Control buttons -->
+  <!--control buttons-->
   <div id="myBtnContainer">
     <div class="row">
       <div class="column">
@@ -567,18 +554,12 @@
     </div>
   </div>
  
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) { 
-      document.getElementById("selectall").click();
-   });
-  </script>
-
   <section class="case_studies">
     <div class="container">
 
       <div class="cases filterDiv web">
       
-        <!-- Trigger the Modal -->
+        <!--trigger the modal-->
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
@@ -586,17 +567,17 @@
           </div>
         </div>
 
-        <!-- The Modal -->
+        <!--the modal-->
         <div id="myModal1" class="modal">
 
-          <!-- Modal content -->
+          <!--modal content-->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
               <img src="/media/pmp.png">
             </div>
             <div class="modal-body" style="text-align: center;">
-              <h1 style="font-size: 32px;">Title</h1>
+              <h1 style="font-size: 32px;">Title Web</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
                 <div class="case_content">
@@ -628,29 +609,28 @@
 
       </div>
 
-      
 
       <div class="cases filterDiv data">
     
-        <!-- Trigger the Modal -->
+        <!--trigger the modal-->
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case Data<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#myModal2">Case Data<br><br>Year</a>
           </div>
         </div>
     
-        <!-- The Modal -->
-        <div id="myModal1" class="modal">
+        <!--the modal-->
+        <div id="myModal2" class="modal">
 
-          <!-- Modal content -->
+          <!--modal content-->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
               <img src="/media/pmp.png">
             </div>
             <div class="modal-body" style="text-align: center;">
-              <h1 style="font-size: 32px;">Title</h1>
+              <h1 style="font-size: 32px;">Title Data</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
                 <div class="case_content">
@@ -682,29 +662,28 @@
 
       </div>
 
-      
     
       <div class="cases filterDiv web data">
     
-        <!-- Trigger the Modal -->
+        <!--trigger the modal-->
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case Web & Data<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#myModal3">Case Web & Data<br><br>Year</a>
           </div>
         </div>
     
-        <!-- The Modal -->
-        <div id="myModal1" class="modal">
+        <!--the modal-->
+        <div id="myModal3" class="modal">
 
-          <!-- Modal content -->
+          <!--modal content-->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
               <img src="/media/pmp.png">
             </div>
             <div class="modal-body" style="text-align: center;">
-              <h1 style="font-size: 32px;">Title</h1>
+              <h1 style="font-size: 32px;">Title Web & Data</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
                 <div class="case_content">
@@ -737,11 +716,10 @@
       </div>
 
       
-      
     </div>
   </section>
 
-  <!--Notes-->
+  <!--notes-->
   <section id="notes" class="notes">
     <div class="container">
       <br>
@@ -750,54 +728,55 @@
           <div class="note__date">13 06 15</div>
           <div class="note__content">
             <div onclick="toggleClass('#onconsciousness')" class="note__title">On consciousness </div>
-            <div class="hidden" id="onconsciousness"><br><p>Consciousness is our newest stage, the latest feature of what is organic; it is, therefore, what we have of less finished and robust. It surprises me that we treat consciousness as a unit of the organism, isolating it from every other biological asset with a ridiculous overestimation in such a way that prevents us from developing it even further, as we believe we already have it.</p></div>
+            <div style="cursor: pointer;" onclick="toggleClass('#onconsciousness')" class="hidden" id="onconsciousness"><br><p>Consciousness is our newest stage, the latest feature of what is organic; it is, therefore, what we have of less finished and robust. It surprises me that we treat consciousness as a unit of the organism, isolating it from every other biological asset with a ridiculous overestimation in such a way that prevents us from developing it even further, as we believe we already have it.</p></div>
           </div>
       </div>
       <div class="note">
           <div class="note__date">15 10 18</div>
           <div class="note__content">
             <div onclick="toggleClass('#onpassion')" class="note__title">On passion</div>
-            <div class="hidden" id="onpassion"><br><p>There is an interesting pattern of synaptic behaviour that can only be achieved by carrying an inexcusably open heart, minimizing the illusion of control to near-zero. Passion is a self-indulging, highly inflammable fuel. It allows a special peace of mind which naturally materialize from the sweet taste of purpose. It is right there - where the limitations of logic no longer allow us to acknowledge because of its extreme subtlety - that uninhabited instincts as such allow us to begin the realm of fullness; and the sensation of having now entered this realm arouses the excitement of all other instincts, previously limited, optimizing mental energy in a self-sufficient process.</p></div>
+            <div style="cursor: pointer;" onclick="toggleClass('#onpassion')" class="hidden" id="onpassion"><br><p>There is an interesting pattern of synaptic behaviour that can only be achieved by carrying an inexcusably open heart, minimizing the illusion of control to near-zero. Passion is a self-indulging, highly inflammable fuel. It allows a special peace of mind which naturally materialize from the sweet taste of purpose. It is right there - where the limitations of logic no longer allow us to acknowledge because of its extreme subtlety - that uninhabited instincts as such allow us to begin the realm of fullness; and the sensation of having now entered this realm arouses the excitement of all other instincts, previously limited, optimizing mental energy in a self-sufficient process.</p></div>
           </div>
       </div>
       <div class="note">
         <div class="note__date">06 05 19</div>
         <div class="note__content">
           <div onclick="toggleClass('#ontruths')" class="note__title">On truth</div>
-          <div class="hidden" id="ontruths"><br><p>Most souls are always bursting with absolute truths and abhor doubts - like a disease - finding, sooner or later, a moment of emergency to which they are moved to heal them. They seek, in fact, a desperate antidote: certainty, which generates a pleasant sensation, whereas doubt does not. Doubt is an anxious idea that causes discomfort. Now, beings do not live in discomfort, they survive. Then there is science; the goal of science would be to provide the pleasure of the methodology, certainties, and identified patterns. No, this is not what happens: doubt and certainty are so interconnected in the process of discovery that those who want to taste the most of one must taste the most of the other.</p></div>
+          <div style="cursor: pointer;" onclick="toggleClass('#ontruths')" class="hidden" id="ontruths"><br><p>Most souls are always bursting with absolute truths and abhor doubts - like a disease - finding, sooner or later, a moment of emergency to which they are moved to heal them. They seek, in fact, a desperate antidote: certainty, which generates a pleasant sensation, whereas doubt does not. Doubt is an anxious idea that causes discomfort. Now, beings do not live in discomfort, they survive. Then there is science; the goal of science would be to provide the pleasure of the methodology, certainties, and identified patterns. No, this is not what happens: doubt and certainty are so interconnected in the process of discovery that those who want to taste the most of one must taste the most of the other.</p></div>
         </div>
       </div>
       <div class="note">
         <div class="note__date">10 05 21</div>
         <div class="note__content">
           <div onclick="toggleClass('#onspace')" class="note__title">On space exploration</div>
-          <div class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might turn out as an improbable or an inevitable phenomenon (i.e. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very rare order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, plus the microscopic historical slice in which our civilization is embedded within and all the potential sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply comprehending this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration. That could create a cross-nation human bond - the first treasure presented by the cosmos to these contemporary sailors.</p></div>
+          <div style="cursor: pointer;" onclick="toggleClass('#onspace')" class="hidden" id="onspace"><br><p>Depending on the observable time window, the conception of life might turn out as an improbable or an inevitable phenomenon (i.e. a carbon molecule making crude copies of itself). Intelligent life, however, requires a set of genetic malleability and random environmental episodes in a very rare order to make the development of a cerebral cortex possible - which few species (on a planet of millions of them) have managed to achieve. When one thinks of the improbability of our existence, plus the microscopic historical slice in which our civilization is embedded within and all the potential sources of extinction (including coming from ourselves), a feeling of urgency to maintain the lineage of our species suddenly arises. By deeply comprehending this idea, the focus of humanity might hopefully converge towards the preservation of the planet and space exploration. That could create a cross-nation human bond - the first treasure presented by the cosmos to these contemporary sailors.</p></div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- Cool stufff, Jam and Cinema-->
+  <!--cool stufff, jam and cinema-->
   <section style="margin-top: 90px;" id="music" class="media main">
     <div class="container">
-      <!-- Cool stuff-->
+      <!--cool stuff-->
       <ul>
         <h2>Cool stuff</h2>
+          <a><li onclick="toggleClass('#research')">Researches</li>
+            <div onclick="toggleClass('#research')" class="hidden" id="research">
+              <br><br><p style="cursor:default">The Human Connectome Project<button onclick="window.open('http://www.humanconnectomeproject.org/','_blank')" class="control">Read</button></p>
+              <br><p style="cursor:default">Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
+            </div>
+          </a>
           <a><li onclick="toggleClass('#articles')">Articles</li>
-            <div class="hidden" id="articles">
+            <div onclick="toggleClass('#articles')" class="hidden" id="articles">
               <br><br><p style="cursor:default">Using the Sun as a Cosmic Telescope<button onclick="window.open('https://blogs.scientificamerican.com/observations/using-the-sun-as-a-cosmic-telescope/','_blank')" class="control">Read</button></p>
+              <br><p style="cursor:default">The clockwork universe: is free will an illusion?<button onclick="window.open('https://www.theguardian.com/news/2021/apr/27/the-clockwork-universe-is-free-will-an-illusion','_blank')" class="control">Read</button></p>
               <br><p style="cursor:default">Bacteria Use Brainlike Bursts of Electricity to Communicate<button onclick="window.open('https://www.scientificamerican.com/article/bacteria-use-brainlike-bursts-of-electricity-to-communicate/','_blank')" class="control">Read</button></p>
             </div>
           </a>
-          <a><li onclick="toggleClass('#research')">Research</li>
-            <div class="hidden" id="research">
-              <br><br><p style="cursor:default">Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
-              <br><p style="cursor:default">Information Management: A Proposal (Tim Berners-Lee, 1989)<button onclick="window.open('https://cds.cern.ch/record/369245/files/dd-89-001.pdf','_blank')" class="control">Read</button></p>
-            </div>
-          </a>
       </ul>
-      <!-- Jam-->
+      <!--jam-->
       <ul>
         <h2>Jam</h2>
         <li>
@@ -809,7 +788,7 @@
         </a>
         </li>
       </ul>
-      <!-- Cinema-->
+      <!--cinema-->
       <ul>
         <h2>Cinema</h2>
         <li>
@@ -829,8 +808,15 @@
     </div>
   </footer>
 
-  <!--Others-->
+  <!--code-->
   <script src="/js/script.js" charset="utf-8"></script>
+  <!--start with Select All clicked-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      document.getElementById("selectall").click();
+   });
+  </script>
+
 
 
 </body>

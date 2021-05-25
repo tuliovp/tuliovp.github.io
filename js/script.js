@@ -27,7 +27,7 @@ function toggletext() {
   }
 }
 
-// scroll down with delay
+// scroll down slowly
 function scrollToSmoothly(pos, time) {
   var currentPos = window.pageYOffset;
   var start = null;
@@ -49,27 +49,10 @@ function scrollToSmoothly(pos, time) {
   });
 }
 
-
-// song player
-document.getElementById("playAudio").addEventListener("click", function(){
-  var audio = document.getElementById('Audio');
-if(this.className == 'is-playing'){
-  this.className = "";
-  this.innerHTML = "Play"
-  audio.pause();
-}else{
-  this.className = "is-playing";
-  this.innerHTML = "Pause";
-  audio.play();
-}
-
-});
-
-
 // all page modals
 var modals = document.querySelectorAll('.modal');
 
-// [START] CERTIFICATIONS MODAL
+// [START] certifications modal
 
 // open the Modal
 function openModal() {
@@ -112,21 +95,68 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// [END] CERTIFICATIONS MODAL
+// [END] certifications modal
 
+// [START] filtering buttons
 
-// [START] CASE STUDIES MODAL
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
-// create references to the modal...
-// var modal_case = document.getElementById('myModal_case');
-// to all cases -- note I'm using a class!
+// show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn1");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// [END] filtering buttons
+
+// [START] case modal
+
+// create references to all cases -- note I'm using a class!
 var cases = document.getElementsByClassName('myCases');
 // the image in the modal
 var modalCaseImg = document.getElementById("caseImg");
-// and the caption in the modal
-// var captionText = document.getElementById("caption");
 
-// Go through all of the cases with our custom class
+// go through all of the cases with our custom class
 for (var i = 0; i < cases.length; i++) {
   var Case = cases[i];
   // and attach our click listener for this case.
@@ -144,40 +174,19 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// [END] CASE STUDIES MODAL
-
-// When the user clicks anywhere outside of the modal, close it
+// when the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-     for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     }
-    }
+  if (event.target.classList.contains('modal')) {
+   for (var index in modals) {
+    if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+   }
+  }
 }
 
-
-
-// [START] CASE STUDIES MODAL
-
-// Get the button that opens the modal
-//var btn = document.querySelectorAll("button.modal-button");
-
-// All page modals
-//var modals = document.querySelectorAll('.modal');
-
-// Get the <span> element that closes the modal
+// get the <span> element that closes the modal
 var spans = document.getElementsByClassName("close");
 
-// When the user clicks the button, open the modal
-//for (var i = 0; i < btn.length; i++) {
- //btn[i].onclick = function(e) {
-   // e.preventDefault();
-    //modal = document.querySelector(e.target.getAttribute("href"));
-    //modal.style.display = "block";
- //}
-//}
-
-// When the user clicks on <span> (x), close the modal
+// when the user clicks on <span> (x), close the modal
 for (var i = 0; i < spans.length; i++) {
  spans[i].onclick = function() {
     for (var index in modals) {
@@ -186,67 +195,21 @@ for (var i = 0; i < spans.length; i++) {
  }
 }
 
-// When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-  //  if (event.target.classList.contains('modal')) {
-    // for (var index in modals) {
-      //if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     //}
-   // }
-//}
+// [END] case modal
 
-// [END] CASE STUDIES MODAL
-
-
-// [START] FILTERING BUTTONS
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
+// song player
+document.getElementById("playAudio").addEventListener("click", function(){
+  var audio = document.getElementById('Audio');
+if(this.className == 'is-playing'){
+  this.className = "";
+  this.innerHTML = "Play"
+  audio.pause();
+}else{
+  this.className = "is-playing";
+  this.innerHTML = "Pause";
+  audio.play();
 }
-
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn1");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+});
 
 
 
