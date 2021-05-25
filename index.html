@@ -73,9 +73,9 @@
         <h2>About</h2>
         <!--Bio-->
         <a><li onclick="toggleClass('#bio')">Bio</li>
-          <div style="font-size: 16px;" onclick="toggleClass('#bio')" class="hidden" id="bio">
+          <div style="font-size: 16px;" class="hidden" id="bio">
             <br>
-            <p style="font-size: 18px;"><b>Hi, I'm Tulio.</b></p>
+            <p style="font-size: 18px;">Hi, I'm Tulio.</p>
             <p>I’m passionate about data analysis, product management, behavioural 
               analytics and customer’s pains.</p>
             <p>I have been breathing accelerators’ dynamic 
@@ -386,7 +386,7 @@
         <a><li onclick="toggleClass('#skills')">Expertise / Skills</li>
           <div onclick="toggleClass('#skills')" class="hidden" id="skills">
             <br>
-            <p style="font-size: 17px;">Expertise ></p>
+            <p style="font-size: 17px;">Expertise</p>
             <div class="skill-bars">
               <div class="bar">
                 <div class="info">
@@ -420,7 +420,7 @@
                   <span></span>
                 </div>
               </div>
-              <br><br><p style="font-size: 17px;">Skills ></p>
+              <br><br><p style="font-size: 17px;">Skills</p>
               <div class="bar">
                 <div class="info">
                   <span>Customer Development</span>
@@ -547,7 +547,7 @@
   <div id="myBtnContainer">
     <div class="row">
       <div class="column">
-        <button class="btn1 active" onclick="filterSelection('all')">Show all</button>
+        <button id="selectall" class="btn1" onclick="filterSelection('all')">Show all</button>
       </div>
         <div class="column">
         <button class="btn1" onclick="filterSelection('web')">Web</button>
@@ -567,6 +567,12 @@
     </div>
   </div>
  
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      document.getElementById("selectall").click();
+   });
+  </script>
+
   <section class="case_studies">
     <div class="container">
 
@@ -593,7 +599,7 @@
               <h1 style="font-size: 32px;">Title</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
-                <div style="text-align: left; margin: 20px 50px;">
+                <div class="case_content">
                   <h1>Description</h1>
                   <hr>
                   <p>Some text...</p>
@@ -647,7 +653,7 @@
               <h1 style="font-size: 32px;">Title</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
-                <div style="text-align: left; margin: 20px 50px;">
+                <div class="case_content">
                   <h1>Description</h1>
                   <hr>
                   <p>Some text...</p>
@@ -701,7 +707,7 @@
               <h1 style="font-size: 32px;">Title</h1>
               <p>Brief explanation</p>
               <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
-                <div style="text-align: left; margin: 20px 50px;">
+                <div class="case_content">
                   <h1>Description</h1>
                   <hr>
                   <p>Some text...</p>
@@ -771,43 +777,46 @@
     </div>
   </section>
 
-  <!-- Cool things, Music and Cinema-->
-  <section id="music" class="media">
+
+  <!-- Cool stufff, Jam and Cinema-->
+  <section style="margin-top: 90px;" id="music" class="media main">
     <div class="container">
+      <!-- Cool stuff-->
       <ul>
         <h2>Cool stuff</h2>
-        <li>
-          <a onclick="toggleClass('#articles')">Articles</a>
+          <a><li onclick="toggleClass('#articles')">Articles</li>
             <div class="hidden" id="articles">
-              <br><br><p>Using the Sun as a Cosmic Telescope<button onclick="window.open('https://blogs.scientificamerican.com/observations/using-the-sun-as-a-cosmic-telescope/','_blank')" class="control">Read</button></p>
-              <br><p>Bacteria Use Brainlike Bursts of Electricity to Communicate<button onclick="window.open('https://www.scientificamerican.com/article/bacteria-use-brainlike-bursts-of-electricity-to-communicate/','_blank')" class="control">Read</button></p>
+              <br><br><p style="cursor:default">Using the Sun as a Cosmic Telescope<button onclick="window.open('https://blogs.scientificamerican.com/observations/using-the-sun-as-a-cosmic-telescope/','_blank')" class="control">Read</button></p>
+              <br><p style="cursor:default">Bacteria Use Brainlike Bursts of Electricity to Communicate<button onclick="window.open('https://www.scientificamerican.com/article/bacteria-use-brainlike-bursts-of-electricity-to-communicate/','_blank')" class="control">Read</button></p>
             </div>
-        </li>
-        <li>
-          <a onclick="toggleClass('#research')">Research</a>
+          </a>
+          <a><li onclick="toggleClass('#research')">Research</li>
             <div class="hidden" id="research">
-              <br><br><p>Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
-              <br><p>Information Management: A Proposal (Tim Berners-Lee, 1989)<button onclick="window.open('https://cds.cern.ch/record/369245/files/dd-89-001.pdf','_blank')" class="control">Read</button></p>
+              <br><br><p style="cursor:default">Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
+              <br><p style="cursor:default">Information Management: A Proposal (Tim Berners-Lee, 1989)<button onclick="window.open('https://cds.cern.ch/record/369245/files/dd-89-001.pdf','_blank')" class="control">Read</button></p>
             </div>
-        </li>
+          </a>
       </ul>
+      <!-- Jam-->
       <ul>
         <h2>Jam</h2>
         <li>
         <audio id="Audio" hidden src="/media/Basin Street Blues.mp3" type="audio/mpeg">
         </audio>
-        <a>Basin Street Blues (Satchmo)</a>
-        <button class="control" id="playAudio">Play</button>
+        <a style="cursor:default">
+          Basin Street Blues (Satchmo)
+          <button class="control" id="playAudio">Play</button>
+        </a>
         </li>
       </ul>
+      <!-- Cinema-->
       <ul>
         <h2>Cinema</h2>
         <li>
-        <a href="https://www.imdb.com/user/ur62531489/ratings?sort=your_rating" target="_blank">My IMDb Ratings</a>
-        <button onclick="window.open('https://www.imdb.com/user/ur62531489/ratings?sort=your_rating','_blank')" class="control">Peek</button>
+          <a href="https://www.imdb.com/user/ur62531489/ratings?sort=your_rating" target="_blank">My IMDb Ratings
+          <button onclick="window.open('https://www.imdb.com/user/ur62531489/ratings?sort=your_rating','_blank')" class="control">Peek</button>
+          </a>
         </li>
-      </ul>
-      <ul>
       </ul>
     </div>
   </section>

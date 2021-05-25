@@ -239,7 +239,7 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
+var btns = btnContainer.getElementsByClassName("btn1");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
@@ -247,3 +247,8 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+
+
+
