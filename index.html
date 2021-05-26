@@ -534,7 +534,7 @@
   <div id="myBtnContainer">
     <div class="row">
       <div class="column">
-        <button id="selectall" class="btn1" onclick="filterSelection('all')">Show all</button>
+        <button id="selectall" class="btn1 active1" onclick="filterSelection('all')">Show all</button>
       </div>
         <div class="column">
         <button class="btn1" onclick="filterSelection('web')">Web</button>
@@ -563,12 +563,12 @@
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal1">Case Web<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#case1">Case Web<br><br>Year</a>
           </div>
         </div>
 
         <!--the modal-->
-        <div id="myModal1" class="modal">
+        <div id="case1" class="modal">
 
           <!--modal content-->
           <div class="modal-content" id="caseImg">
@@ -616,12 +616,12 @@
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal2">Case Data<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#case2">Case Data<br><br>Year</a>
           </div>
         </div>
     
         <!--the modal-->
-        <div id="myModal2" class="modal">
+        <div id="case2" class="modal">
 
           <!--modal content-->
           <div class="modal-content" id="caseImg">
@@ -669,12 +669,12 @@
         <div class="container">
           <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#myModal3">Case Web & Data<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#case3">Case Web & Data<br><br>Year</a>
           </div>
         </div>
     
         <!--the modal-->
-        <div id="myModal3" class="modal">
+        <div id="case3" class="modal">
 
           <!--modal content-->
           <div class="modal-content" id="caseImg">
@@ -810,13 +810,7 @@
 
   <!--code-->
   <script src="/js/script.js" charset="utf-8"></script>
-  <!--start with Select All clicked-->
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) { 
-      document.getElementById("selectall").click();
-   });
-  </script>
-
+  
 
 
 </body>
