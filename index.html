@@ -59,7 +59,8 @@
       <ul>
         <h2>About</h2>
         <!--bio-->
-        <a><li onclick="toggleClass('#bio')">Bio</li>
+        <li>
+          <div class="title" onclick="toggleClass('#bio')">Bio</div>
           <div onclick="toggleClass('#bio')" style="font-size: 16px;" class="hidden" id="bio">
             <br>
             <p style="font-size: 18px;">Hi, I'm Tulio.</p>
@@ -84,9 +85,10 @@
               to study an MSc in Business Analytics in the UK, out 
               of 63,000 applicants globally.</p>
           </div>
-        </a>
+        </li>
         <!--education-->
-        <a><li onclick="toggleClass('#education')">Education</li>
+        <li>
+          <div class="title" onclick="toggleClass('#education')">Education</div>
           <div onclick="toggleClass('#education')" class="hidden" id="education">
             <br>
             <p><b>Business Analytics, MSc</b>
@@ -104,11 +106,12 @@
               <br>Universidade de Pernambuco
               <span style="color:gray; font-size: 15px;">Brazil, 2010 – 2013</p>
           </div>
-        </a>
+        </li>
         <!--certifications-->
-        <details class="details">
+        <li>
+          <details class="details">
           <summary>Certifications (that matters)</summary>
-          <br><p style="font-size: 15px;">Click to enlarge</p>
+          <br><p style="cursor:default; font-size: 15px;">Click to enlarge</p>
           <!-- images used to open the lightbox -->
           <div class="row">
             <div class="column">
@@ -124,8 +127,8 @@
               <img src="/media/chevening.png" style="filter: grayscale(100%);" onclick="openModal();currentSlide(4)" class="hover-shadow">
             </div>
           </div>
-
-        </details><a></a>
+          </details>
+        </li>
             <!--[START] certifications modal/lightbox-->
             <div id="myModal" class="modal">
               <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -178,7 +181,8 @@
             </div>
             <!--[END] certifications modal/lightbox-->
         <!--languages-->
-        <a><li onclick="toggleClass('#languages')">Proficiency</li>
+        <li>
+          <div class="title" onclick="toggleClass('#languages')">Proficiency</div>
           <div style="font-size: 16px;" onclick="toggleClass('#languages')" class="hidden" id="languages">
             <br>
             <div class="skill-bars">
@@ -216,161 +220,168 @@
               </div>
             </div>
           </div>
-        </a>
+        </li>
         <!--notes-->
-        <li><a onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</a></li>           
+        <li>
+          <div class="title" onClick="scrollToSmoothly(document.querySelector('#notes').offsetTop, 500)">Notes</div>
+        </li>           
       </ul>
       
       <!--work-->
       <ul>
         <h2>Work</h2> 
         <!--experience-->
-        <details class="details">
-          <summary>Experience</summary>
-          <p>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Programme Coordinator</b>
-                <br>Hatch Enterprise UK<br>
-                <span style="color:gray; font-size: 14px;">Oct 2019 – Present
-                <br><span style="color:gray; font-size: 14px;">London, UK</summary>
-                <p style="font-size: 15px;"> 
-                  ▪ Project Manager of 4 startup cohorts, focused on supporting >50 impact entrepreneurs, through
-                  knowledge, connection to mentors, access to networks, and workspace;
-                  <br>▪ Responsible for KPI analytics, market research, roadmap planning, features prioritization, and go-
-                  to-market strategies;
-                  <br>▪ Leading partnerships with Adobe, J.P. Morgan, Google Academy, NatWest, Ebay, Amazon, City of
-                  London, Santander, Lloyds, Deutsche Bank, Skadden, and Peabody.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Scholarship Holder</b>
-                <br>Chevening Awards<br>
-                <span style="color:gray; font-size: 14px;">Sep 2018 – Sep 2019
-                <br><span style="color:gray; font-size: 14px;">Essex, UK</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Out of 63,000 applicants globally, I’ve been chosen for Chevening, 
-                the UK Government Scholarship, to study a MSc in Business Analytics at 
-                University of Essex.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Accelerator Coordinator</b>
-                <br>SEED<br>
-                <span style="color:gray; font-size: 14px;">Mar 2018 – Aug 2018
-                <br><span style="color:gray; font-size: 14px;">Belo Horizonte, BR</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Responsible for managing 5 product deliveries and the 2018 acceleration program’s methodology,
-                frameworks, early diagnostics, mentoring, and investment assessments for 40 startups;
-                <br>▪ Product Manager and instructor at SEED Academy: a 6-week cross-functional training program to
-                develop new acceleration agents, by operating several value proposition's design sprints.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Innovation Coordinator</b>
-                <br>Porto Digital<br>
-                <span style="color:gray; font-size: 14px;">Apr 2016 - Feb 2018
-                <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Innovation Coordination at Armazém da Criatividade (Warehouse of Creativity), the Porto Digital’s
-                (biggest tech research park in Brazil) hub designed to promote entrepreneurship within smaller
-                regions in the state;
-                <br>▪ Manager of the startups business incubator (2 cohorts) and coworking space. Performing pricing
-                and revenue modelling, customer interviews and user testing.
-                <br>▪ Planning, structuring, and initial execution of the Ikewai L.A.B: a leadership-focused training for
-                internal managers to run newly designed business models;
-                <br>▪ Responsible for >10 strategic partnerships with commercial associations, universities, and
-                government institutions, to foster the local culture of innovation.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Business Analyst</b>
-                <br>Endeavor Brazil<br>
-                <span style="color:gray; font-size: 14px;">Nov 2014 – Feb 2016
-                <br><span style="color:gray; font-size: 14px;">Recife / São Paulo, BR</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Responsible for evaluating >300 scale-up businesses through a 12-month careful market-mapping,
-                and accelerating the growth of the selected ones using a global-level mentoring network;
-            </details>            
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Franchisee</b>
-                <br>Quiznos Sub<br>
-                <span style="color:gray; font-size: 14px;">Nov 2012 – Mar 2015
-                <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
-                <p style="font-size: 15px;"> 
-                ▪ First franchisee, and regional master franchiser of the American fast-food chain Quiznos Sub;
-                <br>▪ Responsible for daily operations, negotiations, monitoring, and finances. Store sold in February 2015;
-                <br>▪ 1st place in Brazil's Quality Audit Ranking (2014), and highest revenue in the country.
-            </details>     
-            <br>
-            <details class="details">
-              <p><summary style="font-size: 17px;"><b>Marketing Trainee</b>
-                <br>General Motors<br>
-                <span style="color:gray; font-size: 14px;">Dec 2011 – Jan 2013
-                <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
-            </details>   
-            <p></p>
-            <details class="details" style="cursor:n-resize">
-              <p><summary style="font-size: 17px;"><b>Startups Incubator Intern</b>
-                <br>Porto Digital<br>
-                <span style="color:gray; font-size: 14px;">Sep 2010 – Dec 2011
-                <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
-            </details> 
-          </p>
-        </details><a></a>
+        <li>
+          <details class="details">
+            <summary>Experience</summary>
+              <p>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Programme Coordinator</b>
+                  <br>Hatch Enterprise UK<br>
+                  <span style="color:gray; font-size: 14px;">Oct 2019 – Present
+                  <br><span style="color:gray; font-size: 14px;">London, UK</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                    ▪ Project Manager of 4 startup cohorts, focused on supporting >50 impact entrepreneurs, through
+                    knowledge, connection to mentors, access to networks, and workspace;
+                    <br>▪ Responsible for KPI analytics, market research, roadmap planning, features prioritization, and go-
+                    to-market strategies;
+                    <br>▪ Leading partnerships with Adobe, J.P. Morgan, Google Academy, NatWest, Ebay, Amazon, City of
+                    London, Santander, Lloyds, Deutsche Bank, Skadden, and Peabody.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Scholarship Holder</b>
+                  <br>Chevening Awards<br>
+                  <span style="color:gray; font-size: 14px;">Sep 2018 – Sep 2019
+                  <br><span style="color:gray; font-size: 14px;">Essex, UK</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                  ▪ Out of 63,000 applicants globally, I’ve been chosen for Chevening, 
+                  the UK Government Scholarship, to study a MSc in Business Analytics at 
+                  University of Essex.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Accelerator Coordinator</b>
+                  <br>SEED<br>
+                  <span style="color:gray; font-size: 14px;">Mar 2018 – Aug 2018
+                  <br><span style="color:gray; font-size: 14px;">Belo Horizonte, BR</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                  ▪ Responsible for managing 5 product deliveries and the 2018 acceleration program’s methodology,
+                  frameworks, early diagnostics, mentoring, and investment assessments for 40 startups;
+                  <br>▪ Product Manager and instructor at SEED Academy: a 6-week cross-functional training program to
+                  develop new acceleration agents, by operating several value proposition's design sprints.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Innovation Coordinator</b>
+                  <br>Porto Digital<br>
+                  <span style="color:gray; font-size: 14px;">Apr 2016 - Feb 2018
+                  <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                  ▪ Innovation Coordination at Armazém da Criatividade (Warehouse of Creativity), the Porto Digital’s
+                  (biggest tech research park in Brazil) hub designed to promote entrepreneurship within smaller
+                  regions in the state;
+                  <br>▪ Manager of the startups business incubator (2 cohorts) and coworking space. Performing pricing
+                  and revenue modelling, customer interviews and user testing.
+                  <br>▪ Planning, structuring, and initial execution of the Ikewai L.A.B: a leadership-focused training for
+                  internal managers to run newly designed business models;
+                  <br>▪ Responsible for >10 strategic partnerships with commercial associations, universities, and
+                  government institutions, to foster the local culture of innovation.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Business Analyst</b>
+                  <br>Endeavor Brazil<br>
+                  <span style="color:gray; font-size: 14px;">Nov 2014 – Feb 2016
+                  <br><span style="color:gray; font-size: 14px;">Recife / São Paulo, BR</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                  ▪ Responsible for evaluating >300 scale-up businesses through a 12-month careful market-mapping,
+                  and accelerating the growth of the selected ones using a global-level mentoring network;
+              </details>            
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Franchisee</b>
+                  <br>Quiznos Sub<br>
+                  <span style="color:gray; font-size: 14px;">Nov 2012 – Mar 2015
+                  <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                  ▪ First franchisee, and regional master franchiser of the American fast-food chain Quiznos Sub;
+                  <br>▪ Responsible for daily operations, negotiations, monitoring, and finances. Store sold in February 2015;
+                  <br>▪ 1st place in Brazil's Quality Audit Ranking (2014), and highest revenue in the country.
+              </details>     
+              <br>
+              <details class="details">
+                <p><summary style="cursor:default; font-size: 17px;"><b>Marketing Trainee</b>
+                  <br>General Motors<br>
+                  <span style="color:gray; font-size: 14px;">Dec 2011 – Jan 2013
+                  <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
+              </details>   
+              <p></p>
+              <details class="details" style="cursor:n-resize">
+                <p><summary style="cursor:default; font-size: 17px;"><b>Startups Incubator Intern</b>
+                  <br>Porto Digital<br>
+                  <span style="color:gray; font-size: 14px;">Sep 2010 – Dec 2011
+                  <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
+              </details> 
+              </p>
+          </details>
+        </li>
         <!--volunteering-->
-        <details class="details">
-          <summary>Volunteering</summary>
-          <p>
-            <details>
-              <p><summary style="font-size: 17px;"><b>SU Advice Frontrunner</b>
-                <br>University of Essex Students' Union<br>
-                <span style="color:gray; font-size: 14px;">Nov 2018 - Mar 2019
-                <br><span style="color:gray; font-size: 14px;">Essex, UK</summary>
-                <p style="font-size: 15px;"> 
-                ▪ SU Advice is a confidential service offered by the Students’ Union. We provide advice on many different issues facing students during their time at University including housing, immigration, academic issues, representation, consumer and welfare issues.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Event Organizer</b>
-                <br>Global Entrepreneurship Network<br>
-                <span style="color:gray; font-size: 14px;">Nov 2014 - Nov 2017
-                <br><span style="color:gray; font-size: 14px;">Brazil</summary>
-                <p style="font-size: 15px;"> 
-                ▪ The Global Entrepreneurship Week is a movement created in 2007 by former British Prime Minister Gordon Brown and the then president of the Kauffman Foundation, Carl Schramm, in order to strengthen and spread the entrepreneurial culture, connecting, empowering and inspiring people.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Startups Jury</b>
-                <br>Entrepreneur Organization (EO)<br>
-                <span style="color:gray; font-size: 14px;">Jan 2018 - Dec 2018
-                <br><span style="color:gray; font-size: 14px;">Brazil</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Global Student Entrepreneur Awards (GSEA)
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Mentor</b>
-                <br>Aliança Empreendedora<br>
-                <span style="color:gray; font-size: 14px;">Sep 2017 - Mar 2018
-                <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Aliança Empreendedora (Entrepreneurs Alliance) is a brazilian NGO that works for social and economic inclusion trough the support and integration of low income micro entrepreneurs (normally excluded from the market) in a system that offers “3 Accesses” to increase their income and improve the growth of there business.
-            </details>
-            <br>
-            <details>
-              <p><summary style="font-size: 17px;"><b>Community Volunteer</b>
-                <br>Colégio Equipe<br>
-                <span style="color:gray; font-size: 14px;">Feb 2005 - Dec 2005
-                <br><span style="color:gray; font-size: 14px;">Brazil</summary>
-                <p style="font-size: 15px;"> 
-                ▪ Participation in the activities of the 'School Support' project. We gave elementary classes to children living in the favela next to the school who did not have the opportunity to have basic education.
-            </details>            
-          </p>
-        </details> 
+        <li>
+          <details class="details">
+            <summary>Volunteering</summary>
+            <p>
+              <details>
+                <p><summary style="font-size: 17px;"><b>SU Advice Frontrunner</b>
+                  <br>University of Essex Students' Union<br>
+                  <span style="color:gray; font-size: 14px;">Nov 2018 - Mar 2019
+                  <br><span style="color:gray; font-size: 14px;">Essex, UK</summary>
+                  <p style="cursor:default; font-size: 15px;"> 
+                  ▪ SU Advice is a confidential service offered by the Students’ Union. We provide advice on many different issues facing students during their time at University including housing, immigration, academic issues, representation, consumer and welfare issues.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Event Organizer</b>
+                  <br>Global Entrepreneurship Network<br>
+                  <span style="color:gray; font-size: 14px;">Nov 2014 - Nov 2017
+                  <br><span style="color:gray; font-size: 14px;">Brazil</summary>
+                  <p style="cursor:default; font-size: 15px;"> 
+                  ▪ The Global Entrepreneurship Week is a movement created in 2007 by former British Prime Minister Gordon Brown and the then president of the Kauffman Foundation, Carl Schramm, in order to strengthen and spread the entrepreneurial culture, connecting, empowering and inspiring people.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Startups Jury</b>
+                  <br>Entrepreneur Organization (EO)<br>
+                  <span style="color:gray; font-size: 14px;">Jan 2018 - Dec 2018
+                  <br><span style="color:gray; font-size: 14px;">Brazil</summary>
+                  <p style="cursor:default; font-size: 15px;"> 
+                  ▪ Global Student Entrepreneur Awards (GSEA)
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Mentor</b>
+                  <br>Aliança Empreendedora<br>
+                  <span style="color:gray; font-size: 14px;">Sep 2017 - Mar 2018
+                  <br><span style="color:gray; font-size: 14px;">Recife, BR</summary>
+                  <p style="cursor:default; font-size: 15px;"> 
+                  ▪ Aliança Empreendedora (Entrepreneurs Alliance) is a brazilian NGO that works for social and economic inclusion trough the support and integration of low income micro entrepreneurs (normally excluded from the market) in a system that offers “3 Accesses” to increase their income and improve the growth of there business.
+              </details>
+              <br>
+              <details>
+                <p><summary style="font-size: 17px;"><b>Community Volunteer</b>
+                  <br>Colégio Equipe<br>
+                  <span style="color:gray; font-size: 14px;">Feb 2005 - Dec 2005
+                  <br><span style="color:gray; font-size: 14px;">Brazil</summary>
+                  <p style="cursor:default; font-size: 15px;"> 
+                  ▪ Participation in the activities of the 'School Support' project. We gave elementary classes to children living in the favela next to the school who did not have the opportunity to have basic education.
+              </details>            
+            </p>
+          </details> 
+        </li>
         <!--expertise / skills-->
-        </details><a></a>        
-        <a><li onclick="toggleClass('#skills')">Expertise &nbsp;/&nbsp; Skills</li>
+        </details>    
+        <li>
+          <div class="title" onclick="toggleClass('#skills')">Expertise &nbsp;/&nbsp; Skills</div>
           <div onclick="toggleClass('#skills')" class="hidden" id="skills">
             <br>
             <p style="font-size: 17px;">Expertise</p>
@@ -506,20 +517,24 @@
               </div>
             </div>
           </div>
-        </a>      
+        </li>
         <!--case studies / research--> 
-        <li><a onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies &nbsp;/&nbsp; Research</a></li>
+        <li>
+          <div class="title" onClick="scrollToSmoothly(document.querySelector('#case_studies').offsetTop, 500)">Case studies &nbsp;/&nbsp; Research</div>
+        </li>
         <!--competitions-->
-        <li><a class="disabled">Competitions</a></li>
+        <li>
+          <div style="cursor:default" class="disabled title">Competitions</div>
+        </li>
       </ul>
 
       <!--contact-->
       <ul>
         <h2>Contact</h2>
-        <li><a onclick="toggletext()" id="email">Email</a></li>          
-        <li><a href="https://www.linkedin.com/in/tuliovasconcelos/" target="_blank">Linkedin</a></li>
-        <li><a href="https://github.com/tuliovp" target="_blank">Github</a></li>
-        <li><a href="https://www.kaggle.com/tuliovp" target="_blank">Kaggle</a></li>
+        <li><div class="title" onclick="toggletext()" id="email">Email</div></li>          
+        <li><a href="https://www.linkedin.com/in/tuliovasconcelos/" target="_blank"><div class="title">Linkedin</div></a></li>
+        <li><a href="https://github.com/tuliovp" target="_blank"><div class="title">Github</div></a></li>
+        <li><a href="https://www.kaggle.com/tuliovp" target="_blank"><div class="title">Kaggle</div></a></li>
       </ul>
 
     </div>
@@ -762,19 +777,21 @@
       <!--cool stuff-->
       <ul>
         <h2>Cool stuff</h2>
-          <a><li onclick="toggleClass('#research')">Researches</li>
+          <li>
+            <div class="title" onclick="toggleClass('#research')">Researches</div>
             <div onclick="toggleClass('#research')" class="hidden" id="research">
               <br><br><p style="cursor:default">The Human Connectome Project<button onclick="window.open('http://www.humanconnectomeproject.org/','_blank')" class="control">Read</button></p>
               <br><p style="cursor:default">Random Forests (Breiman, 2001)<button onclick="window.open('https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf','_blank')" class="control">Read</button></p>
             </div>
-          </a>
-          <a><li onclick="toggleClass('#articles')">Articles</li>
+          </li>
+          <li>
+            <div class="title" onclick="toggleClass('#articles')">Articles</div>
             <div onclick="toggleClass('#articles')" class="hidden" id="articles">
               <br><br><p style="cursor:default">Using the Sun as a Cosmic Telescope<button onclick="window.open('https://blogs.scientificamerican.com/observations/using-the-sun-as-a-cosmic-telescope/','_blank')" class="control">Read</button></p>
               <br><p style="cursor:default">The clockwork universe: is free will an illusion?<button onclick="window.open('https://www.theguardian.com/news/2021/apr/27/the-clockwork-universe-is-free-will-an-illusion','_blank')" class="control">Read</button></p>
               <br><p style="cursor:default">Bacteria Use Brainlike Bursts of Electricity to Communicate<button onclick="window.open('https://www.scientificamerican.com/article/bacteria-use-brainlike-bursts-of-electricity-to-communicate/','_blank')" class="control">Read</button></p>
             </div>
-          </a>
+          </li>
       </ul>
       <!--jam-->
       <ul>
@@ -782,19 +799,29 @@
         <li>
         <audio id="Audio" hidden src="/media/Basin Street Blues.mp3" type="audio/mpeg">
         </audio>
-        <a style="cursor:default">
+        <div>
           Basin Street Blues (Satchmo)
           <button class="control" id="playAudio">Play</button>
-        </a>
+        </div>
+        </li>
+        <li>
+          <div onclick="toggleClass('#spotify')">
+            My Work Playlist
+            <button href="#spotify">Get Focused</button>
+          </div>
+          <div onclick="toggleClass('#spotify')" class="hidden" id="spotify">
+            <br> Listen to zero lyrics <br><br>
+            <iframe src="https://open.spotify.com/embed/playlist/2HMJBwnofl7LUQfrz560Ju" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
         </li>
       </ul>
       <!--cinema-->
       <ul>
         <h2>Cinema</h2>
         <li>
-          <a href="https://www.imdb.com/user/ur62531489/ratings?sort=your_rating" target="_blank">My IMDb Ratings
-          <button onclick="window.open('https://www.imdb.com/user/ur62531489/ratings?sort=your_rating','_blank')" class="control">Peek</button>
-          </a>
+          <div>My IMDb Ratings
+            <button onclick="window.open('https://www.imdb.com/user/ur62531489/ratings?sort=your_rating','_blank')" class="control">Peek</button>
+          </div>
         </li>
       </ul>
     </div>

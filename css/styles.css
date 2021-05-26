@@ -154,7 +154,6 @@ textarea {
 
 details:hover {
 	display: block;
-	cursor: pointer;
 }
 
 @font-face {
@@ -434,22 +433,35 @@ picture {
 	margin-bottom: 86px
 }
 
+.main li {
+	cursor: default;
+	border-bottom: 1px solid #000;
+	display: block;
+	padding-bottom: 27px;
+	margin-bottom: 32px;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+}
+
+.main p {
+	cursor: pointer;
+}
+
+.main .skill-bars {
+	cursor: pointer;
+}
+
+.title {
+	cursor: pointer;
+}
+
 @media screen and (min-width:42em) {
 	.main ul {
 		margin-bottom: 0
 	}
 }
 
-.main a {
-	display: block;
-	padding-bottom: 27px;
-	margin-bottom: 32px;
-	border-bottom: 1px solid #000;
-	-webkit-transition: all .3s ease-in;
-	transition: all .3s ease-in
-}
-
-.main a.disabled {
+.main div.disabled {
 	text-decoration: line-through
 }
 
@@ -998,6 +1010,7 @@ width: 60%;
 img.demo {
 	opacity: 0.6;
 	padding: 1px 8px;
+	cursor: pointer;
 }
 
 .active,
@@ -1007,6 +1020,7 @@ img.demo {
 
 img.hover-shadow {
 	transition: 0.3s;
+	cursor: pointer;
 }
 
 .hover-shadow:hover {
