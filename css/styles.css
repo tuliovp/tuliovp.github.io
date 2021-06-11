@@ -1418,6 +1418,40 @@ img.hover-shadow {
 
 /* [END] filtering buttons */
 
+/* [START] visitors counter */
+
+.counter {
+	text-align: left;
+	height: 20px;
+	width: 15%;
+	margin: 35px 0 0 0;
+	border-bottom: 1px solid black;
+	position: absolute;
+    right: 0px;
+
+}
+
+.counter .hitCounter {
+	display: inline-block;
+	color: black;
+	margin-right: -2px;
+}
+
+@media screen and (max-width:750px) {
+	.counter {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width:450px) {
+	.counter {
+		width: 35%;
+	}
+}
+
+/* [END] visitors counter */
+
+
 /* OLD STUFF */
 /*
 
