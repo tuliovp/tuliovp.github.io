@@ -1106,7 +1106,9 @@ img.hover-shadow {
 
 .cases img {
 	width: 65%;
+	height: 180px;
 	max-height: 250px;
+	border: solid 1px;
 }
 
 @media screen and (min-width:42em) {
