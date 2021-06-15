@@ -1104,16 +1104,15 @@ img.hover-shadow {
 	display: block
 }
 
-.cases img {
-	width: 65%;
-	height: 180px;
-	max-height: 250px;
+.cases .image {
+
 	border: solid 1px;
 }
 
-@media screen and (min-width:42em) {
-	.cases img {
-		width: 50%
+@media screen and (max-width:400px) {
+	.cases .image {
+		width: 50%;
+		height: 50%;
 	}
 }
 
@@ -1252,15 +1251,26 @@ img.hover-shadow {
 	min
 }
 
+.modal-header img {
+	max-height: 250px;
+	border: solid 1px;
+}
+
 @media screen and (max-width: 530px) {
 	.case_studies .modal-header {
 		padding-bottom: 190px;
+	}
+	.modal-header img {
+		max-height: 180px;
 	}
 }
 
 @media screen and (max-width: 380px) {
 	.case_studies .modal-header {
 		padding-bottom: 150px;
+	}
+	.modal-header img {
+		max-height: 140px;
 	}
 }
 
