@@ -622,6 +622,12 @@ ul {
 	list-style: none
 }
 
+.case_content ul {
+	margin: 25px;
+	padding: 0;
+	list-style: circle;
+}
+
 /* [START] hide detail tag arrow */
 
 .details > summary {
@@ -1104,18 +1110,6 @@ img.hover-shadow {
 	display: block
 }
 
-.cases .image {
-
-	border: solid 1px;
-}
-
-@media screen and (max-width:400px) {
-	.cases .image {
-		width: 50%;
-		height: 50%;
-	}
-}
-
 /* [END] case studies gallery */
 
 /* [START] case overlay caption when hover */
@@ -1136,10 +1130,17 @@ img.hover-shadow {
   opacity: 1;
   display: block;
   width: 100%;
+  height: ;
   transition: .5s ease;
   backface-visibility: hidden;
   padding-left: 0px;
   padding-right: 0px;
+  border: solid 1px;
+}
+
+@media screen and (max-width:400px) {
+	.cases .image {
+	}
 }
 
 .cases .middle {
