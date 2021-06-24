@@ -66,6 +66,5 @@
                   </p>
                   <h1>Discover more</h1>
                   <hr>
-                  <p>This web application is available on my Github - 
-                    feel free to have a look and let me know your thoughts. 
+                  <p>This web application is available live on tuliovp.github.io - feel free to have a look and let me know your thoughts. 
                     </p>
