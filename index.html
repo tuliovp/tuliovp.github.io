@@ -607,7 +607,7 @@
                   <h1>Description</h1>
                   <hr>
                   <p>
-                    This is an entry-level project to achieve an environment where I can expose my projects' portfolio, both in Web Development and Data Science, besides practicing the following skills:
+                    This is an entry-level project to build an environment where I can expose my projects' portfolio, both in Web Development and Data Science, besides practicing the following skills:
                     <br>
                     <ul>
                       <li>HTML</li>
@@ -618,7 +618,7 @@
                     <br>
                     <b>HTML</b>
                     <br><br>
-                    <p>I have followed the best practices I found in repositories on Github, in terms of code style and explanatory comments. Highlights from the HTML file include:</p>
+                    <p>I have followed the best practices I found in repositories on Github, in terms of code style and explanatory comments. Highlights from the <code>html</code> file include:</p>
                     <ul>
                       <li>Meta tag that gives the browser instructions on how to control the page's dimensions and scaling;</li>
                       <li>Meta tag used to summarize the web page's content - Search engines use it in search results to let visitors know what a page is about before they click on it;</li>
@@ -629,7 +629,7 @@
                     <br>
                     <b>CSS</b>
                     <br><br>
-                    <p>Despite its simplicity, there is a fair amount of code running behind it (~1500 lines of CSS), including:</p>
+                    <p>Despite its simplicity, there is a fair amount of code running behind it (~1500 lines of <code>css</code>), including:</p>
                     <ul>
                       <li>All dimensions to fit different screen sizes;</li>
                       <li>WebKit extensions to CSS & CSS [attribute] Selector;</li>
@@ -644,7 +644,7 @@
                     <br>
                     <b>JavaScript</b>
                     <br><br>
-                    <p>I have chosen to work with pure JS, when jQuery was the mainstream go-to option. Pure Javascript to access the DOM can be faster as you can cut the overhead that jQuery has on this. You can find in the .js file functions working on the following actions:</p>
+                    <p>I have chosen to work with pure <code>js</code>, when <code>jQuery</code> was the mainstream go-to option. Pure Javascript to access the DOM can be faster as you can cut the overhead that <code>jQuery</code> has on this. You can find in the <code>js</code> file functions working on the following actions:</p>
                     <ul>
                       <li>Show email when clicked;</li>
                       <li>Scroll down slowly when clicked in Notes / Cases;</li>
@@ -687,47 +687,57 @@
       </div>
 
 
-      <div class="cases filterDiv data">
+      <div class="cases filterDiv web">
     
         <!--trigger the modal-->
         <div class="container">
-          <img class="myCases container image overlay" id="myImg" src="/media/pmp.png" style="filter: grayscale(100%);" alt="">
+          <img class="myCases container image overlay" id="myImg" src="/media/react.jpg" style="filter: grayscale(100%);" alt="">
           <div class="middle">
-            <a class="myCases text" id="myImg" href="#case2">Case Data<br><br>Year</a>
+            <a class="myCases text" id="myImg" href="#react">Playing Around (REACT)<br><br>2021</a>
           </div>
         </div>
     
         <!--the modal-->
-        <div id="case2" class="modal">
+        <div id="react" class="modal">
 
           <!--modal content-->
           <div class="modal-content" id="caseImg">
             <div class="modal-header">
               <span class="close">×</span>
-              <img src="/media/pmp.png">
+              <img src="/media/react.jpg">
             </div>
             <div class="modal-body" style="text-align: center;">
-              <h1 style="font-size: 32px;">Title Data</h1>
-              <p>Brief explanation</p>
-              <a class="btn1 btn-secondary btn1 text-uppercase" href="">Link</a>
+              <h1 style="font-size: 32px;">Playing Around (React)</h1>
+              <p>Giving the JavaScript library a try</p>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="https://tuliovp.github.io/addition/">App</a>
                 <div class="case_content">
                   <h1>Description</h1>
                   <hr>
-                  <p>Some text...</p>
-                  <p>Some images</p>
+                  <p>
+                    To create apps with interactive UIs that will render data updates, React can be really helpful.
+                    <br><br>
+                    First I load and unpack the version of <code>react</code> and <code>react-dom</code>, keeping the <code>crossorigin</code> attribute set.
+                    Then, I add an attribute to script tag for babel to translate this code to AJAX and create a Class component called <code>App</code>.
+                    Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. They accept arbitrary inputs 
+                    (called “props”) and return React elements describing what should appear on the screen.
+                    <br><br>Components serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. 
+                    In this case, it will render simple random addition problems and the "You won!" message <code>if(this.state.score === 5)</code>.
+                    <img src="/media/you_won.png">  
+                    <br><br>I have created different events which will be updated when the Enter key is <code>inputKeyPress</code> - extracting the answer and
+                    checking if it is correct. If so, <code>score: state.score + 1</code>. If not, <code>score: state.score - 1</code>.
+                  </p>
                   <br>
                   <h1>Read more</h1>
                   <hr>
-                  <p>This web application is available (...). 
-                    You can read the scientific paper on (...). 
-                    The source code of the project are on Github.</p>
+                  <p>This web application is available in the following APP button. 
+                    The source code of the project is on Github.</p>
                     <br>
                     <div class="row">
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="https://github.com/tuliovp/addition/blob/main/index.html">Github</a>
                       </div>
                       <div class="column">
-                        <a class="btn btn-secondary btn text-uppercase" href="">Link</a>
+                        <a class="btn btn-secondary btn text-uppercase" href="https://tuliovp.github.io/addition/">App</a>
                       </div>
                     </div>
                 </div>
