@@ -1142,21 +1142,23 @@ img.hover-shadow {
   padding-right: 0px;
 }
 
-/* make the image to responsive */
+/* make the image responsive */
 .cases .image {
   opacity: 1;
-  display: block;
-  width: 100%;
-  height: ;
+  display: inline-block;
   transition: .5s ease;
   backface-visibility: hidden;
   padding-left: 0px;
   padding-right: 0px;
   border: solid 1px;
+  min-width: 200px;
+  min-height: 130px;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:700px) {
 	.cases .image {
+		min-width: 0;
+		min-height: 0;
 	}
 }
 
