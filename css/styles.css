@@ -1257,7 +1257,7 @@ img.hover-shadow {
 	min-width: fit-content;
 }
 
-.modal-body {padding: 2px ;}
+.modal-body {padding: 2px ;margin: 25px;}
 
 .case_studies .modal-header {
     position:relative;
