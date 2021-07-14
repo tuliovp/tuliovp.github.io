@@ -249,9 +249,18 @@
             <summary>Experience</summary>
               <p>
               <details>
+                <p><summary style="font-size: 17px;"><b>Advanced Analytics</b>
+                  <br>B3<br>
+                  <span style="color:gray; font-size: 14px;">August 2021 - Present
+                  <br><span style="color:gray; font-size: 14px;">São Paulo, BR</summary>
+                  <p style="cursor: default; font-size: 15px;"> 
+                    ▪ B3 is the official stock exchange of Brazil, headquartered in the city of São Paulo. It is the sixth largest financial and capital market exchange in the world, with assets of 13 billion dollars.
+              </details>
+              <br>
+              <details>
                 <p><summary style="font-size: 17px;"><b>Programme Coordinator</b>
                   <br>Hatch Enterprise UK<br>
-                  <span style="color:gray; font-size: 14px;">Oct 2019 – Present
+                  <span style="color:gray; font-size: 14px;">Oct 2019 – Jul 2021
                   <br><span style="color:gray; font-size: 14px;">London, UK</summary>
                   <p style="cursor: default; font-size: 15px;"> 
                     ▪ Project Manager of 4 startup cohorts, focused on supporting >50 impact entrepreneurs, through
@@ -585,6 +594,165 @@
   <section class="case_studies">
     <div class="container">
 
+      <!--B3-->
+      <div class="cases filterDiv data statistics">
+
+        <!--trigger the modal-->
+        <div class="container">
+          <img class="myCases container image overlay" id="myImg" src="/media/b3.gif" style="filter: grayscale(100%);" alt="">
+          <div class="middle">
+            <a class="myCases text" id="myImg" href="#b3">Case - Brazilian Stock Exchange<br><br>2021</a>
+          </div>
+        </div>
+    
+        <!--the modal-->
+        <div id="b3" class="modal">
+
+          <!--modal content-->
+          <div class="modal-content" id="caseImg">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <img src="/media/b3.gif">
+            </div>
+            <div class="modal-body" style="text-align: center;">
+              <h1 style="font-size: 32px;">Case - Brazilian Stock Exchange (2021)</h1>
+              <p>B3 is the Brazilian stock exchange - which I have worked at for a while. This was a case part of the selection process. </p>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="https://github.com/tuliovp/case_stock_exchange">Github</a>
+                <div class="case_content">
+                  <h1>Description</h1>
+                  <hr>
+                  <p>
+                    B3 is the official stock exchange of Brazil, headquartered in the city of São Paulo. It is the sixth largest financial and capital market exchange in the world, with assets of 13 billion dollars.
+                    <br><br>
+                    The goal of the project was to understand what drives clients to leave, to approach them surgically, before it's too late, without bothering customers who don't indicate dissatisfaction. A summary:
+                    <ol>
+                      <li>Client: broker</li>
+                      <li>Revenue sources: brokerage and custody</li>
+                      <li>Target audience: PF (income <= 20k)</li>
+                      <li>Problem: Churn (investment flight)</li>
+                      <li>There is room to reduce price in some cases</li>
+                      <li>They can approach dissatisfied customers (but they cannot bother good customers)</li>
+                    </ol>
+                    Notes for data treatment:
+                    <ul>
+                      <li>There are missing values only in tm_compra and tm_venda (expected, as there was not necessarily a purchase or sale in M0) </li>
+                      <li>Convert datatypes</li>
+                      <li>No duplicate lines</li>
+                      <li>New features: Three new columns that we can take intelligence from: number of shares bought, number of shares sold, and the difference between the two</li>
+                    </ul>
+                  <iframe src="https://github.com/tuliovp/case_stock_exchange/blob/master/b3_cleaning.ipynb" title="B3 - Cleaning" width="100%" height="350px">
+                    </iframe>
+                    <br><br>
+                    Notes from data exploration:
+                    <ul>
+                      <li>The distributions of purchases and sales are very similar, horizontally and vertically</li>
+                      <li>Quantities of assets bought and sold by customers are concentrated between 0-200</li>
+                      <li>Total values of assets bought and sold by customers are concentrated between R$ 0-5K</li>
+                      <li>Most customers have around 0 - 10k shares, but with less than 50 different shares</li>
+                      <li>There are more customers who sold more than they bought than customers who bought more than they sold (dif_cv < 0), in terms of transactions. But it doesn't say much about absolute investment leaving.</li>
+                      <li>The lower the income range, the greater the number of clients who left the brokerage in M1 (but also those who remained, which may be just a simple proportion of the distribution)</li>
+                      <li>More clients from professions B and C left in M1 than from professions A (different from those who remained)</li>
+                      <li>Almost all customers who left in M1 made less than 250 transactions, either buying or selling, in M0</li>
+                      <li>Almost all customers who left in M1 transacted (buy and sell) equal to or less than 5k in M0</li>
+                      <li>Only customers with a buy-sell difference between -1k to 1k left in M1 - although it follows the more concentrated distribution in the center (RF will show 10% importance / central trend will show that it is -300 to 300)</li>
+                      <li>Only customers with 70 different shares or less left in M1</li>
+                      <li>There were RC contacts with both clients who remained and left the brokerage</li>
+                      <li>There are no very visible correlations, other than those expected, such as the positive correlation between # stocks and # different stocks; and distribution relationships that we've analyzed previously.</li>
+                      <li>Average ticket values are those that have the highest linear correlation with the client remaining active or inactivating their brokerage account, but since ativo_m1 is a binary category variable, "r" is not the ideal indicator.</li>
+                      <li>There are no very visible correlations, other than those expected, such as the positive correlation between # stocks and # different stocks; and distribution relationships that we've analyzed previously.</li>
+                      <li>The average of qt_compras, val_compra, tm_compra, qt_vendas, val_venda, tm_venda of customers who remained in M1 is always higher than customers who have deactivated their accounts in M1.</li>
+                      <li>Having sold more assets than bought is not necessarily a good indicator that the client left in M1 (average dif_cv smaller/negative)</li>
+                      <li>Customers who remained in M1 have an average of # different shares and generally higher than customers who left, but there are outliers in active customers in M1 that pull the average up</li>
+                      <li>Averages of average tickets are good evidence, as it reduces outliers and the distribution of customers who left the broker in M1 is concentrated above the interquartile 75%, close to the maximum values of the average ticket of customers who remained at the broker (higher standard deviation).</li>
+                    </ul>
+                  <iframe src="https://nbviewer.jupyter.org/github/tuliovp/case_stock_exchange/blob/master/b3_EDA.ipynb" title="B3 - Exploring" width="100%" height="350px">
+                  </iframe>
+                  <br><br>
+                    <b>Models:</b><br><br>
+                    Although exploratory analysis provides some interesting indicators, we can raise the bar in our analysis with machine learning models to see which features help predict the variable that matters in our case: <code>ativo_m1</code>.
+                    <br><br>
+                    In other words, how can we determine whether a customer is about to leave next month, to optimize the work of customer relationship managers (and offer reduced prices, if that's the case) without unnecessarily inconveniencing others?
+                    <br><br>
+                    I will use two forecasting techniques: <code>Logistic Regression</code> and <code>Random Forest</code>.
+                    <br><br>
+                    Logistic Regression is useful for being able to work with continuous and discrete data. However, unlike Linear Regression, it is not easy to compare performance of models with many vs. few independent variables (there is no concept of residuals, so it is not possible to use the least squares (cost function) to calculate the R²) - For this, we test whether the effect of the independent variable in predicting the dependent is significantly different from 0 ( using Wald's Test, or Z test - I didn't use Chi-square). If <code>not (=0)</code>, it means the variable is not helping. In other words, we use the concept of 'maximum likelihood' (we calculate the observation probability of all points on the X axis to be <code>=0</code> and <code>y=1</code> (Sigmoid function converts the input into a range 0-1), and we multiply all the probabilities/likelihood together; then we move the "S" line several times and calculate the same thing until we find the curve with 'maximum likelihood'). To do this, we calculate the probability of leaving the brokerage house by the total number of people who left the brokerage house divided by the total number of customers. Then we multiply this probability by the total number of customers who have a specific independent variable. This will be the expected number of clients that have the independent variable AND have left the broker. And the rest is the expected number of clients that have the independent variable E will not leave the broker. Then we do the same (probability of leaving the broker (already calculated) x total number of clients who DO NOT have this same independent variable (and subtraction).
+                    <br><br>
+                    First of all, we need to turn categorical variables into <b>dummy variables</b> - binary "switches" that turn the parameters in the equation on or off.
+                    We also need to separate test data from training data so as not to have a complex model with a very good fit with the data, as it may not be generalist enough to work with new data (overfitting)
+                    <br><br>
+                    As we saw in the exploratory analysis, classes are unbalanced (89/11).
+                    <br><br>
+                    One way to resolve unbalanced datasets is "oversample" the smaller class. That One approach to addressing imbalanced datasets is to oversmple the minority class. The simplest approach involves duplicating examples in the minority class, although these examples do not add any new information to the model. Instead, new examples can be synthesized from existing examples. This is a type of data augmentation for the minority class and is referred to as the Synthetic Minority Oversampling Technique, or <b>SMOTE</b>.
+                    <br><br>
+                    At a high level, SMOTE works by creating synthetic secondary class samples (unsigned) rather than creating copies. Randomly choosing one of the nearest k-nearest-neighbors and using it to create new observations similar but randomly adjusted.
+                    <br><br>
+                    In this study, I used Recursive Feature Elimination, Decision Trees and the VIF method to eliminate multicollinearity and arrive at the most important features in predicting the independent variable ativo_m1.
+                    <br><br>
+                    Recursive Feature Elimination (RFE) is based on the idea of repeatedly creating a model and choosing which one has the best feature performance, leaving the feature aside and repeating the process with the rest of the features. This process is applied until all features in the dataset are exhausted. The goal is to select features by considering recursively smaller and smaller amounts of variables.
+                    <br><br>
+                    Decision trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from data resources. A tree can be seen as a constant approximation in parts.
+                    <br><br>
+                    The quantities of purchases and sales remain at the top, as in the case of the RFE, but information regarding actions and professions also appears.
+                    <br><br>
+                    Multicollinearity is also an issue for Decision Trees. Decision trees make no assumptions about the relationships between resources. It just builds divisions on single features that improve rank, based on a measure of impurity like Gini or entropy. If the resources qt_vendas and tm_venda are strongly correlated, no / little information can be obtained from the division into tm_venda after the division into qt_vendas. In the case of multicollinearity, this will likely mean that they will fit the most effective variable they find, leaving out other plausible variables. There is a material probability that the algorithm fits not on the 'right' variable, but on a strong variable correlated with the right variable, since which predictor is chosen to partition the samples is essentially a random selection.
+                    <br><br>
+                    As a rule, a VIF greater than 2 already indicates multicollinearity.
+                    <br><br>
+                    To choose the features, I used a combination of:
+                    <br><br>
+                    Variables that were detected as important in both RFE and Decision Trees (qt_vendas, qt_compras, acoes_dif, renda e profissão))
+                    Categorical variables that showed a trend in the Exploratory Analysis (renda e profissão)) and can give important signals in the approach of Customer Relationship agents
+                    Elimination of features with high multicollinearity
+                    <br><br>
+                    <ul>
+                    <li>Pseudo R-squared: explaining almost 50% of the variation in ativo_m1 (although it is not the ideal indicator, as R² in the OLS - here it is the ratio of the logarithmic probability of the null model to the full model.)</li>
+                    <li>The Z-test (ratio of Coef/Std.Err) is a way of testing whether the effect of the independent variable in predicting the dependent variable is significantly different from 0.</li>
+                    <li>Coefficients predict changes in log odds of the dependent variable for each unit augmented in the independent variable. Positive values ​​indicate that an increase in the explanatory variable also predicts an increase in the probability associated with the dependent variable. For example, when the customer has profissao_A (changes from 0 to 1), the cumulative probability of the customer being active (changes from 0 to 1) increases by exp(1,6007) - with 95% confidence interval of being between 1.4236 - 1.7778.</li>
+                    <li>Negative coefficients indicate the opposite: for example, when the customer has renda_De 0 a 5k (changes from 0 to 1), the cumulative probability of the customer being active (changes from 0 to 1) reduces exp(2.4259) - with 95 % confidence interval lies between -2.5512 - -2.3006.</li>
+                    </ul>
+                    That said, we can see that:
+                    <ul>
+                    <li>The lower the income, the greater the likelihood of ativo_m1 = 0 (leaving the broker in M1). Especially if it's less than 10K. Proving deductions from the exploratory analysis and indicating that the problem may be that lower-income customers are looking for more competitive prices;</li>
+                    <li>Professions B and C are more likely to leave the brokerage house, also proving deductions from the exploratory analysis;</li>
+                    <li>Quantity of assets bought and sold do not have significant difference in the forecast of ativo_m1. In the exploratory analysis, "having sold more assets than bought is not necessarily a good indicator that the client exited in M1 (mean dif_cv smaller/negative)"</li>
+                    <li>Having a larger amount of different stocks does not explain ativo_m1 forecast significantly either. In the exploratory analysis: "clients who remained in M1 have an average of # different shares and generally higher than clients who left, but there are outliers in active clients in M1 that pull the average up"</li>
+                    </ul>
+                    The result tells us that there were 279 (87% of the y's that were negative and the model predicted as negative) + 2510 (94% of the y's that were positive and we predicted as positive). A total of 2789 correct predictions, against 41+170=211 incorrect predictions.
+                    <br><br>
+                    Typical error of 0.03 with Random Forest Classifier. Even better than Logistic Regression.
+                    <br><br>
+                    Random Forest Classifier confirms the suggestion of the most important features of Features Extraction and Exploratory Analysis: qt_compras, qt_vendas e acoes_dif, in addition to profissao_A and renda_De 5 to 10k, despite their reduced importance.
+                    <br><br>
+                    <iframe src="https://nbviewer.jupyter.org/github/tuliovp/case_stock_exchange/blob/master/b3_models.ipynb" title="Stone - Exploring" width="100%" height="350px">
+                    </iframe>
+                  </p>
+                  <br>
+                  <h1>Read more</h1>
+                  <hr>
+                  <p>
+                  Feel free to download the repository and check how everything's working for yourself. And let me know if you have any comments.
+                  <br>The source code of the project is on Github:</p>
+                    <br>
+                    <div class="row">
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="https://github.com/tuliovp/case_stock_exchange/blob/master/b3_cleaning.ipynb">Cleaning</a>
+                      </div>
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="https://nbviewer.jupyter.org/github/tuliovp/case_stock_exchange/blob/master/b3_EDA.ipynb">Exploring</a>
+                      </div>
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="https://nbviewer.jupyter.org/github/tuliovp/case_stock_exchange/blob/master/b3_models.ipynb">Models</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>   
+
       <!--Ton-->
       <div class="cases filterDiv data viz statistics">
 
@@ -636,7 +804,7 @@
                   <iframe src="https://nbviewer.jupyter.org/github/tuliovp/case_stone/blob/master/1.cleaning.ipynb" title="Stone - Cleaning" width="100%" height="350px">
                     </iframe>
                     <br><br>
-                    Notes for data exploration:
+                    Notes from data exploration:
                     <ul>
                       <li>The Product, Application and Logistics subjects represent 75% of the 77,489 calls.</li>
                       <li>85% of tickets are without the satisfaction survey value.</li>
@@ -648,7 +816,7 @@
                   <iframe src="https://nbviewer.jupyter.org/github/tuliovp/case_stone/blob/master/2.exploring.ipynb" title="Stone - Exploring" width="100%" height="350px">
                   </iframe>
                   <br><br>
-                    Answers:
+                    <b>Case questions:</b>
                     <ol>
                       <li>In order to plot with better visibility of the X axis, it was preferable to replace dates by their respective weeks of the year.</li>
                       <li>There was a vertiginous growth in the number of TON customers (assuming zero turnover). Therefore, it is suggested to analyze not only the number of calls (which naturally must have increased), but its proportion with the total number of customers in the week of the year.</li>
@@ -685,7 +853,7 @@
                   <hr>
                   <p>
                   Feel free to download the repository and check how everything's working for yourself. And let me know if you have any comments.
-                  <br>The source code of the project is on Github and you can also see it on nbviewer.</p>
+                  <br>The source code of the project is on Github:</p>
                     <br>
                     <div class="row">
                       <div class="column">
@@ -1243,6 +1411,156 @@
                       </div>
                       <div class="column">
                         <a class="btn btn-secondary btn text-uppercase" href="https://nbviewer.jupyter.org/github/tuliovp/case_store/blob/master/looqbox.ipynb">NBVIEWER</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+
+      <!--Dissertation-->
+      <div class="cases filterDiv data statistics viz">
+
+        <!--trigger the modal-->
+        <div class="container">
+          <img class="myCases container image overlay" id="myImg" src="/media/dissertation.png" style="filter: grayscale(100%);" alt="">
+          <div class="middle">
+            <a class="myCases text" id="myImg" href="#dissertation">A ML framework for predicting reviews<br><br>2019</a>
+          </div>
+        </div>
+    
+        <!--the modal-->
+        <div id="dissertation" class="modal">
+
+          <!--modal content-->
+          <div class="modal-content" id="caseImg">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <img src="/media/dissertation.png">
+            </div>
+            <div class="modal-body" style="text-align: center;">
+              <h1 style="font-size: 32px;">Modelling the relationship between sales attributes and customer satisfaction (2019)</h1>
+              <p>A machine learning framework for predicting review ratings in e-commerce</p>
+              <a class="btn1 btn-secondary btn1 text-uppercase" href="https://github.com/tuliovp/randomforestOCR">Github</a>
+                <div class="case_content">
+                  <h1>Description</h1>
+                  <hr>
+                  <p>
+                    University of Essex, 2018-19<br>
+                    Dissertation submitted in partial fulfilment of the requirements for the award of MSc in Business Analytics
+                    <br><br>
+                    <b>Abstract</b><br><br>
+                    Big data analytics (BDA) is no longer a competitive advantage, but a compulsory ability to endure in an ecosystem increasingly attentive to customer behaviour. In this context, few industries offer such an abundance of raw customer data as e-commerce, where is possible to explore why users make many decisions and judgments. One of most commonly used feature in e-commerce is the online customer review rating (OCR), a form of electronic word of mouth (eWOM) that can reduce the unfamiliarity risk in purchase decision, and also seen as an essential index of overall customer satisfaction. Although the idea of OCRs as a sales driver being well researched, little is discussed about the factors coming from the side of the seller that drive the OCRs themselves. This research, as an alternative, uses OCR as the predicted variable, testing if the different ways the product and order were placed may impact on final consumer satisfaction (measured by the OCR). To investigate this relationship, the research conducts an Exploratory Data Analysis (EDA) of order attributes (such as delivery time, description length and price) contained in a data set of 100,000 transactions made through a Brazilian marketplace called Olist. Next, the research uses the attributes to predict the OCR through Linear and Ordinal Logistic regressions, as well as through Random Forest regression and classification models. The Random Forest classifier, in particular, produces a very reliable prediction, with an accuracy of 1.00 for OCRs rated as 1, 4 and 5, and an accuracy of 0.99 for OCRs rated as 2 and 3. The attribute weights and correlations are somewhat validated, and the outcomes may contribute to future work of scholars and entrepreneurs in the field of consumer behaviour, product management, and data analysis.
+                    <br><hr><br></p>
+                    <iframe src="https://nbviewer.jupyter.org/github/tuliovp/randomforestOCR/blob/master/Dissertation%20Notebook.ipynb" title="Dissertation" width="100%" height="350px">
+                    </iframe><br><br>
+                    <p>The research tries to understand if the product category or the order organisation and execution might have an influence on customer satisfaction by creating some expectations, that will be fulfilled or not. Being a very general investigation, it is further subdivided into six hypotheses to facilitate the experiment according to the different attributes collected — from how the product is displayed up to when it is delivered. Then, a model is developed for predicting which score (OCR) the consumer would give according to the information from these attributes. Therefore, the research question is:
+                    <br><br>
+                    <b>“Does particular product characteristics and order structures impact on the final customer satisfaction (measured by the OCR)?”</b>
+                    <br><br>
+                    Research hypotheses:
+                    <ul>
+                      <li>H1: Product categories have biases towards the online customer review rating (OCR)</li>
+                      <li>H2: An increase in the product price negatively impacts the online customer review rating (OCR)</li>
+                      <li>H3: An increase in the delivery price negatively impacts the online customer review rating (OCR)</li>
+                      <li>H4: An increase in the delivery time negatively impacts the online customer review rating (OCR)</li>
+                      <li>H5: An increase in the description size positively impacts the online customer review rating (OCR)</li>
+                      <li>H6: An increase in the number of photos positively impacts the online customer review rating (OCR)</li>
+                    </ul>
+                    <br><br>
+                    <img src="/media/dissertation_methodology.png"> </p>
+                    <br><p>
+                    <b>Data Cleaning and Preprocessing</b><br><br>
+                    The data set information was collected from about 100,000 orders made through a Brazilian marketplace called Olist from 2016 to 2018. Olist, besides having its own e-commerce, registers its sellers in a system that connects to other large e-commerce in Brazil, such as Amazon, Carrefour and Mercado Livre (Olist Serviços Digitais Ltda, 2016-2018). It is a public data set, provided by Olist itself through an Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license of use, and available at the online data scientists community Kaggle, owned by Google LLC. At the time of this dissertation, the database is in its Version 7, and it was last updated on November 29, 2018.
+                    <br><br>
+                    All features’ One-Sample T-test had p-value > 0.05, and therefore, we accept the null hypothesis that the sample mean is not significantly different from the population mean. It should be noted here that it was challenging to find a normal distribution within most features, including those extracted for this study.
+                    <br><br>
+                    Several highly significant Tests of Normality (both Kolmogorov-Smirnov and Shapiro-Wilk) were performed, with Q-Q chart points tending to pull away from the line that provides the expected normal distribution, indicating that the features are not normally distributed.
+                    <br><br>
+                    <b>The first step was to merge the original data set with a parallel set called product_category_name_english, and then replace the information from the original category feature, to translate product categories into English. Being a Brazilian company, the original data was in Portuguese.</b>
+                    <br><br>
+                    There are, in fact, some outliers in all features. This was detected through visual analysis by boxplots and through the Z-score function, for better describing the relationship of the data with its Mean and Standard Deviation. Data points with Z-score values greater than the threshold value of 3 and lesser than -3 have been adequately eliminated, resulting in an updated data set of 89,134 orders. Both the developed Regression Analysis and Random Forest were tested with data sets with and without outliers, and in both, the performance was increased in the data set without outliers.
+                    <br><br> <b>Exploratory Data Analysis</b><br><br>
+                    Through the process of data analysis, data is collected and analysed to answer questions, test hypotheses, or disprove theories (Judd & McClelland, 1989).
+                    <br><br>
+                    Two Reliability Analysis for detecting multi-correlating features were performed for the extraction of a Cronbach’s α (alpha), which helps to measure internal consistency and uni-dimensionality (Tavakol & Dennick, 2011). The first included the variables prod_value, delivery_value and total_value, and the second included delivery_est_time, delivery_act_time, and delivery_precision. The goal was to understand if a dimension reduction through Factor Analysis would be useful to extract some set of hidden variables explaining their relationship. The first test group resulted in a Cronbach value greater than 0.7, meaning the variables have a high correlation.
+                    <br><br>
+                    A Factor Analysis was performed and extracted two components, which one of them with an eigenvalue explaining 75% of the relationship (basically representing prod_value and total_value). The high correlation, although ignored at the moment, showed that one of these variables should be excluded from the Regression Analysis ahead. The second test group resulted in a Cronbach value of less than 0.7, which is treated as a low correlation between variables (Tavakol & Dennick, 2011).
+                    <br><br>
+                    The purpose of the research’s exploratory data analysis (EDA) is not to understand the entire data set, but only the feature’s correlations with the dependent variable online customer rating (OCR). Scatterplot, boxplot, value distributions by Review Score’s means and analysis of variance (ANOVA) were used for this purpose through Python groupby and describe functions, IBM SPSS statistical software, and Tableau for data visualisation.
+                    <br><br>
+                    As for the relationship between reviews and delivery time, it is possible to see much more clearly that both the current average delivery time (represented by the variable delivery_act_time) and the average delivery precision (delivery_precision) influence the score attributed by the consumer, as explained by the higher coefficient of correlation calculated before. Estimated time is not represented here because it has a lower correlation, possibly meaning that the time expected to be delivered doesn’t impact much at the time of purchase, only after it, while waiting for the real delivery. It is clear, indeed, that low review scores concentrate more late orders than the high scores.
+                    <br><br>
+                    The mean average of the delivery actual time assigned to 1-star orders is 16.63 days, and as it decreases, it moves to a higher OCR, reaching 10.69 days in 5 stars. The minimum and maximum days also change, reaching 0.53 day in 5-stars reviews and 1.07 days in 1-star reviews. The relationship of the OCR with delivery precision is reversed, where the mean average of a product being delivered in advance is 12.77 days in 5-stars reviews and 7.55 days 1-star reviews. However, in all ratings there are delays, reaching the maximum of 18.92 days late in 5-stars reviews and 19.07 in 1-star review.
+                    <br><br> <b>Models</b><br><br>
+                    To verify the correlation between attributes and OCRs, this study performs predictions that linearly depends on the explanatory data we have, by means of a Linear Regression Analysis (Glasserman, 2011) and by extracting the ratio of variance explained by the regression model, known as the coefficient of determination, or R-squared (Rao, 1973).
+                    <br><br>
+                    Later on, the research explains the possible correlations through a regression method specifically used for arbitrary scaled (a.k.a. ordinal) dependent variables, such as the research’s OCR. Known as Ordinal Logistic Regression, this type of regression can also be considered a classification method (Winship & Mare, 1984).
+                    <br><br>
+                    Next, to validate whether the relationship explained by the earlier regression analyses would work with new information, this research attempts to perform some predictions. It develops a supervised learning classification model using the known observations contained in a separate training set to predict the rating class of given data points. Random Forest (a particular method of ensemble learning) is chosen because it performs very well compared to the other classifiers, is robust against over-fitting and very user-friendly, being widely used both for regression and classification problems from this type of independently-constructed tabular data set (Hastie et al., 2009; Breiman, 2001; Elite Data Science, 2019; Ho, 1995; Thanh Noi & Kappas, 2017).
+                    <br><br>
+                    Because of its Bootstrap Aggregation and Feature Randomness algorithms, Random Forests can handle large data sets, and both numerical and categorical variables with high dimensionalities, without overfitting (unlike a regular Decision Tree) or needing to be standardised (Hastie, et al., 2009). Also, by using a random subset of variables, it reduces the tree’s correlations (Breiman, 2001), producing a more accurate prediction (Ho, 1995) and avoiding features multicollinearity.
+                    <br><br>
+                    Different than Logistic Regression, Random Forests can perform with both linear and non-linear features’ relationships and works with categorical data, with no need to reduce our multiclass problem into multiple binary “dummy” variables, or scaling the highly dimensional features at pre-processing time (Hastie, et al., 2009). In addition, Logistic Regression may suffer from multicollinearity, which is unlikely to happen in Random Forest.
+                    <br><br>
+                    If using Support Vector Machines (SVM), it would also be required to perform one-hot-encoding for the research’s categorical variables since SVM is mainly suited for two-class problems. Besides, SVMs are not designed to predict probabilities (Caruana & Niculescu-Mizil, 2006) as it provides the distance of support vectors from the decision boundary, which still must be converted to get the class probability. Random Forest already gives it, being more easily interpreted. SVMs are more computational-intensive than Random Forest because it usually needs (1) a non-linear kernel trick to work on non-linear features’ dependencies (Boser, et al., 1992), which should be carefully picked for not risking the model accuracy and speed, and (2) longer training time for bigger data sets than RFs. Random Forests usually reaches satisfactory results with the default parameters (Thanh Noi & Kappas, 2017), being typically chosen at first over SVMs in the field of data science (Elite Data Science, 2019).
+                    <br><br>
+                    Naïve Bayes (NB) is also a straightforward classification method, but again, features multicollinearity is likely to happen since it expects them all to be independent to each other (Amancio, et al., 2014), and normally distributed. NB is known to its poorly probability prediction due to this unrealistic independence assumption (Caruana & Niculescu-Mizil, 2006). It might perform very well with high-dimensional small sets (Amancio, et al., 2014) but Random Forest is preferred for working with the more significant number of features and examples in this research’s data set.
+                    <br><br>
+                    The main disadvantage of K-Nearest Neighbours (KNN), compared to Random Forest, is its slower computation time when the sample magnitude is large or high-dimensional. Because KNN finds the neighbours nodes while tracking the training data in real-time, the model can be more memory-intensive. Random Forest simplicity, again, requires no wisely selection of hyperparameters, like the number of k in KNN, which is challenging to set (Thanh Noi & Kappas, 2017); nor feature-scaling, dealing with outliers better than KNN. Finally, Random Forest is more comfortable to interpret, usually outputting the factor’s importance on the classification, unlike KNN.
+                    <br><br>
+                    Artificial Neural Networks (ANN) and deep learning algorithms also have a slower training and execution speed, compared to Random Forests, besides both being powerful methods. ANN, however, requires (1) a large amount of scaled training data, (2) a high level of complexity in computational processing (Thanh Noi & Kappas, 2017) and (3) tuning the architecture and hyperparameters for adequate accuracy, usually being performed after (and sometimes outperformed by) Random Forest for more general classification problems.
+                    <br><br>
+                    Most important, unlike many machine learning methods, especially ANN, Random Forest is not a “black box”. RF produces an index of variables ranked by their importance on the classification accuracy (Breiman, 2001), being easier to interpret the results. Because of its mixed method of Bootstrap Aggregation with Feature Randomness, is possible to measure the importance of each feature, as well as estimate the ensemble’s strength, correlation and generalization error (PE) in every tree’s split, allowing the model to be fit and validated whilst being trained (Breiman, 2001; Hastie, Tibshirani, & Friedman, 2009).
+                    <br><br>
+                    In summary, it is a very simple and complete “out of the box” algorithm. It is usually recommended before trying other methods of classification that takes more time to train and execute.
+                    <br><br>
+                    <b>Predicting</b>
+                    <br><br>
+                    For the regression analysis, both linear and ordinal logistic regression were performed, being the latter more suitable for predicting dependent variables in an ordinal scale presentation, such as the OCR score (McCullagh, 1980).
+                    <br><br>
+                    First, categorical variables such as late and product_category were changed into numeric variables. Product categories, in particular, were recoded into dummy variables for linear regression analysis, which did not significantly change the output, with an R-squared increasing from 0.099 (not including categories) to 0.106 (including categories). Overall, as expected, the model does not perform well in a linear regression analysis, presenting a typical mean squared prediction error of about 1.206, which is substantial when trying to predict values in a 1-5 array.
+                    <br><br>
+                    Next, the multicollinearity of the predictors has been tested in an ordinary least squares (OLS) regression analysis by checking the Variance Inflation Factor (VIF), which is the proportion of the variances in a multiple-terms model comparing to the one-term model (Gareth, et al., 2017). This collinearity analysis is required to drop any highly correlated predictors and, as expected, the extracted features total_value and delivery_precision (when using the late variable) or delivery_est_time (when not using late) were excluded for having a high VIF.
+                    <br><br>
+                    Therefore, for the ordinal logistic regression, total_value and delivery_precision was removed from the model. The other variables presented a VIF value between 1.0 and 2.0, not needing to be removed.
+                    <br><br>
+                    For splitting the data set into training and test sets, a model selection tool from scikit-learn library known as Stratified ShuffleSplit was used as cross-validator. It “provides train/test indices to split data into train/test sets”, returning “stratified randomised folds (…) made by preserving the percentage of samples for each class” (scikit-learn developers, 2019).
+                    <br><br>
+                    This type of split better represent the original set and potentially decreases any bias for Random Forest Regression and Classification. The proportion of training and test set size was set as 80:20. Next, the Labels and Features data sets were created, separating review_score from the other features.
+                    <br><br>
+                    A typical prediction error of about 1.20 is not at all satisfying when we are trying to predict values that range from 1 to 5.
+                    <br><br>
+                    The next step was to perform the ordinal logistic regression. The only ordinal categorical variable in the model was the dependent variable review_score, the same as in the linear regression analysis, of course. On the independent variables side, the categorical variables product_category and late were classified as factors in the SPSS Statistics procedures, while prod_value, delivery_value, descr_size, photos_qty, delivery_est_time and delivery_act_time were treated as covariates, with only descr_size and photos_qty not being continuous.
+                    <br><br>
+                    The assumption of no multicollinearity was also validated by removing total_value and delivery_precision from the model and testing the VIF of product_category dummy variables. A full likelihood ratio test was similarly performed to ensure the features would have proportional odds and other assumptions, as normally distributed error terms (residuals) and homoscedasticity are not required for ordinal logistic regression (Menard, 2010). The large sample size also helps to assume linearity of independent variables related to the log odds. Lastly, scaling through standardisation is not required for logistic regression since its own exponential function already saturates a value once it crosses the threshold.
+                    <br><br>
+                    Random Forest is one of the most popular ensemble methods for supervised machine learning and is able to perform both regression and classification, “serving as an off-the-shelf procedure for data mining” (Hastie, et al., 2009). It develops a “forest” by building up a multitude of decision trees capable of handling both numerical and categorical data; and non-linear relationship parameters do not affect its performance (Breiman, 2001).
+                    Additionally, Random Forests can handle large data sets with high dimensionalities and will correct decision tree’s potentially model overfitting through their Bootstrap Aggregation (or bagging) and Feature Randomness methods (Hastie, et al., 2009).
+                    <br><br>
+                    The advantage incurred from training the samples with the bagging method before the ensemble process is the creation of different individual learning models, trained on subparts of the same set, reducing the learning process variance before voting or adding the output at the end (Hastie, et al., 2009). In addition, Feature Randomness allows Random Forests constituent trees to use only the random subset of variables (instead of considering all variables as in a standard decision tree), reducing the correlation between trees (Breiman, 2001).
+                    <br><br>
+                    This diversification gives this research’s diverse independent variables more relevant weights according to their importance. The result of this vast amount of reasonably uncorrelated trees is a more accurate prediction performance than any of its individual component’s predictions alone (Ho, 1995), compensating the small increase of bias that comes with reducing the variance.
+                    <br><br>
+                    Typical error of 0.12 with Random Forest Classifier. Even better than Regression.<br><br>
+                  </p>
+                  <br>
+                  <h1>Read more</h1>
+                  <hr>
+                  <p>
+                  Feel free to download the repository and check how everything's working for yourself. And let me know if you have any comments.
+                  <br>The source code of the project is on Github and you can also see it on nbviewer.</p>
+                    <br>
+                    <div class="row">
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="https://github.com/tuliovp/randomforestOCR">Github</a>
+                      </div>
+                      <div class="column">
+                        <a class="btn btn-secondary btn text-uppercase" href="https://nbviewer.jupyter.org/github/tuliovp/randomforestOCR/blob/master/Dissertation%20Notebook.ipynb">NBVIEWER</a>
                       </div>
                     </div>
                 </div>
