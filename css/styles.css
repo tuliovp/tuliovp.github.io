@@ -755,13 +755,13 @@ summary {
   width: 100%;
 }
 .bar .progress-line.prod span{
-  width: 60%;
+  width: 70%;
 }
 .bar .progress-line.proj span{
   width: 80%;
 }
 .bar .progress-line.data span{
-  width: 40%;
+  width: 50%;
 }
 .bar .progress-line.cd span{
   width: 100%;
@@ -787,8 +787,8 @@ width: 60%;
 .bar .progress-line.python span{
 	width: 30%;
 }
-.bar .progress-line.r span{
-	width: 20%;
+.bar .progress-line.GA span{
+	width: 50%;
 }
 .bar .progress-line.ml span{
 	width: 20%;
@@ -836,13 +836,13 @@ width: 60%;
   content: ">10 yrs";
 }
 .progress-line.prod span::after{
-  content: "6 yrs";
+  content: "7 yrs";
 }
 .progress-line.proj span::after{
   content: "8 yrs";
 }
 .progress-line.data span::after{
-  content: "4 yrs";
+  content: "5 yrs";
 }
 .progress-line.cd span::after{
   content: ">10 yrs";
@@ -868,8 +868,8 @@ width: 60%;
 .progress-line.python span::after{
 	content: "3 yrs";
 }
-.progress-line.r span::after{
-	content: "2 yrs";
+.progress-line.GA span::after{
+	content: "5 yrs";
 }
 .progress-line.ml span::after{
 	content: "2 yrs";
