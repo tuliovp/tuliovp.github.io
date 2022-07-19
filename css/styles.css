@@ -785,7 +785,7 @@ width: 60%;
 	width: 50%;
 }
 .bar .progress-line.python span{
-	width: 30%;
+	width: 40%;
 }
 .bar .progress-line.GA span{
 	width: 50%;
@@ -866,7 +866,7 @@ width: 60%;
 	content: "5 yrs";
 }
 .progress-line.python span::after{
-	content: "3 yrs";
+	content: "4 yrs";
 }
 .progress-line.GA span::after{
 	content: "5 yrs";
