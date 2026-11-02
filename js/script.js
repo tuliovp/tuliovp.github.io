@@ -153,25 +153,13 @@ for (var i = 0; i < btns.length; i++) {
 
 // create references to all cases -- note I'm using a class!
 var cases = document.getElementsByClassName('myCases');
-// the image in the modal
-var modalCaseImg = document.getElementById("caseImg");
 
 // go through all of the cases with our custom class
 for (var i = 0; i < cases.length; i++) {
-  var Case = cases[i];
-  // and attach our click listener for this case.
-  Case.onclick = function(evt) {
-    modal_case = document.querySelector(evt.target.getAttribute("href"));
-    modal_case.style.display = "block";
-    modalCaseImg.src = this.src;
-    // captionText.innerHTML = this.alt;
+  cases[i].onclick = function(evt) {
+    evt.preventDefault();
+    document.querySelector(this.getAttribute("href")).style.display = "block";
   }
-}
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
 }
 
 // when the user clicks anywhere outside of the modal, close it
